@@ -75,6 +75,7 @@
         <td style="width: 30%;"><img src="img/김떡비.jpg" style="height: 400px; width: 100%;" /><h1>김떡비   <img src="img/star3.png"></h1></td>
       <tr>
     </table>
+    <h1>시간 추가</h1>
     
     
     
