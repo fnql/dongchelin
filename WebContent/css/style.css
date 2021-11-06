@@ -1,11 +1,28 @@
-h4{
-    background-image: url("/WebContent/img/place303su.jpg");
-}
-
 #pla{
     font-family:궁서;
     color: violet;
-    background-image: url("/WebContent/img/place303su.jpg");
+}
+
+.headImg {
+  position:relative;
+}
+
+.headImg div {
+  position:absolute;
+  text-align: center;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+.headImg #dong{
+  font-size: 60px;
+  color: #a0e9ff;
+}
+.headImg h4{
+  color: white;
+  position:absolute;
+  top:95%;
+  left: 90%;
 }
 body {
     background-repeat: no-repeat;

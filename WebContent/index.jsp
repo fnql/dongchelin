@@ -22,14 +22,17 @@
       <a href="#contact">배달가능식당</a>
       <a href="#contact">로그인&마이페이지</a>
     </div>
-    <div class="lb-text">
-      <h1 id="dong">동슐랭</h1>
-      <p>솔직한 리뷰, 믿을 수 있는 평점!</p>
-      <input type="text" placeholder="맛집 검색">
-      <input class="btn btn-primary" type="submit" value="검색" onclick="trackEvent('CLICK_KEYWORD_SEARCH');">
-      <h4>fjeifeji</h4>
-    </div>
+    <div class="headImg">
       <img src="img/place303su.jpg" style="height: 600px; width: 100%;" />
+      <div class="headText">
+        <h1 id="dong">동슐랭</h1>
+        <p>솔직한 리뷰, 믿을 수 있는 평점!</p>
+        <input type="text" placeholder="맛집 검색">
+        <input class="btn btn-primary" type="submit" value="검색" onclick="trackEvent('CLICK_KEYWORD_SEARCH');">
+        
+      </div>
+      <h4 id="clock">00:00:00</h4>
+    </div>
   </header>
     <hr>
     <h1 id="pla">동슐랭 선정 맛집</h1>
@@ -78,6 +81,7 @@
 
     
     <!--  부트스트랩 js 사용 제일 하단 위치-->
+    <script src="js/clock.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
