@@ -21,7 +21,7 @@
       <a href="#contact">리뷰게시판</a>
       <a href="#contact">배달가능식당</a>
       <a href="#contact">로그인&마이페이지</a>
-    </div>
+  </div>
     <div class="headImg">
       <img src="img/place303su.jpg" style="height: 600px; width: 100%;" />
       <div class="headText">
