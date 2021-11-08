@@ -20,7 +20,7 @@
       <a href="#news">자유게시판</a>
       <a href="#contact">리뷰게시판</a>
       <a href="#contact">배달가능식당</a>
-      <a href="#contact">로그인&마이페이지</a>
+      
   </div>
     <div class="headImg">
       <img src="img/place303su.jpg" style="height: 600px; width: 100%;" />
@@ -35,6 +35,11 @@
     </div>
   </header>
     <hr>
+    <p class="logintul">로그인&마이페이지</p>
+      <div class="panel" style="display: none;">
+        <p>Because time is valuable, we deliver quick and easy learning.</p>
+        <p>At W3Schools, you can study everything you need to learn, in an accessible and handy format.</p>
+      </div>
     <h1 id="pla">동슐랭 선정 맛집</h1>
     <table  style="width: 90%; margin-left: 5%;">
       <tr>
@@ -82,6 +87,7 @@
     
     <!--  부트스트랩 js 사용 제일 하단 위치-->
     <script src="js/clock.js"></script>
+    <script src="js/loginTul.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
