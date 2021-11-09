@@ -2,6 +2,23 @@
     font-family:궁서;
     color: violet;
 }
+#panel, #logintul {
+  background-color: #ffffff;
+  color: #a0e9ff;
+  text-align: center;
+  float: left;
+  display: block;
+  font-size: 20px;
+  padding: 14px;
+  text-decoration: none;
+  width: 20%;
+}
+
+#panel {
+  padding: 5px;
+  display: none;
+  width: 300px;
+}
 
 .headImg {
   position:relative;
