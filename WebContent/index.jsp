@@ -14,13 +14,7 @@
   </head>
   <body>
   <header class="main-header">
-  <div id="navbar">
-      <a href="#home">맛집추천</a>
-      <a href="#news">자유게시판</a>
-      <a href="#contact">리뷰게시판</a>
-      <a href="#contact">배달가능식당</a>
-      
-  </div>
+    <jsp:include page="module/top.jsp" flush="false" />
     <div class="headImg">
       <img src="img/place303su.jpg" style="height: 600px; width: 100%;" />
       <div class="headText">
@@ -34,11 +28,6 @@
     </div>
   </header>
     <hr>
-    <div id="logintul">로그인&마이페이지</div>
-    <div id="panel">
-      <p>Because time is valuable, we deliver quick and easy learning.</p>
-      <p>At W3Schools, you can study everything you need to learn, in an accessible and handy format.</p>
-    </div>
     <h1 id="pla">동슐랭 선정 맛집</h1>
     <table  style="width: 90%; margin-left: 5%;">
       <tr>
