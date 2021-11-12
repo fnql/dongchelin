@@ -76,7 +76,6 @@
     <!--  부트스트랩 js 사용 제일 하단 위치-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/loginTul.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     
     </body>
