@@ -39,6 +39,9 @@
             <div class="submit">
                 <input type="submit" value="submit">
             </div>
+            <div class="submit">
+                <input onClick="location.href='signup.jsp'"type="button" value="회원가입">
+            </div>
         </div>
     </div>
 </body>
