@@ -18,7 +18,7 @@
     <div class="headImg">
       <img src="img/place303su.jpg" style="height: 600px; width: 100%;" />
       <div class="headText">
-        <h1 id="dong">동슐랭</h1>
+        <h1 id="dong">동슐랭h</h1>
         <p>솔직한 리뷰, 믿을 수 있는 평점!</p>
         <input type="text" placeholder="맛집 검색">
         <input class="btn btn-primary" type="submit" value="검색" onclick="trackEvent('CLICK_KEYWORD_SEARCH');">
