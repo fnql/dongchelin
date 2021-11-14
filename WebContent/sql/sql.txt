@@ -1,0 +1,11 @@
+필요한것
+1.이메일
+2.비밀번호
+3.성별
+4.선호음식
++ 회원 정보에 동슐랭 스타(기본 0스타), 내부인(학생, 교직원) or 외부인
+
+email varchar(100)
+pw    varchar(20) 
+sex   varchar(10)
+best  varchar(100)
