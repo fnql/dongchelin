@@ -12,34 +12,48 @@
     <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-    <div class="wrap">
-        <div class="login">
-            <h2>Log-in</h2>
-            <div class="login_sns">
-            <li><a href=""><i class="fab fa-instagram"></i></a></li>
-            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href=""><i class="fab fa-twitter"></i></a></li>
-            </div>
-            <div class="login_id">
-                <h4>E-mail</h4>
-                <input type="email" name="" id="" placeholder="Email">
-            </div>
-            <div class="login_pw">
-                <h4>Password</h4>
-                <input type="password" name="" id="" placeholder="Password">
-            </div>
-            <div class="login_etc">
-                <div class="checkbox">
-                <input type="checkbox" name="" id=""> Remember Me?
-                </div>
-                <div class="forgot_pw">
-                <a href="">Forgot Password?</a>
-            </div>
-            </div>
-            <div class="submit">
-                <input type="submit" value="submit">
-            </div>
-        </div>
+    <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form id="loginform" class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('loginform').remove()" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
 </body>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </html>

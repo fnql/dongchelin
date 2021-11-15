@@ -28,7 +28,7 @@
     </div>
   </header>
     <hr>
-    <h1 id="pla">동슐랭 선정 맛집aaaaaaaa</h1>
+    <h1 id="pla">동슐랭 선정 맛집</h1>
     <table  style="width: 90%; margin-left: 5%;">
       <tr>
         <td style="width: 30%;"><img alt="우마이" src="img/우마이.jpg" style="height: 400px; width: 100%;" /><h1 size="5">우마이 &ensp;<img src="img/star3.png"></h1></td>
