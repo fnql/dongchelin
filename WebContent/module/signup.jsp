@@ -6,7 +6,7 @@
 <p><h2 align="center">동슐랭 회원가입</h2></p>
 
 <%-- 여기 페이지 추가하기 --%>
-<FORM  action="loginBean.jsp" method="post">
+<FORM  action="login.jsp" method="post">
 <table width="50%" height="80" border="1" align="center" cellpadding="5" cellspacing="0" bordercolor="777999">
     <tr>
         <td colspan="2" align="center" bgcolor="skyblue">
