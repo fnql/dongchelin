@@ -61,7 +61,7 @@
     </tr>
     <tr>
         <td bgcolor="#afeeee" align="center"><div style="font-weight: bold;">자기소개</div></td>
-        <td><textarea name="intro" cols="70" rows="5"></textarea></td>
+        <td><input type="text" name="my_name" size="60" maxlength="10"></td>
     </tr>
 </table>
     <p align="center">
