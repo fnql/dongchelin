@@ -7,7 +7,14 @@ public class Member {
 	private String name;
 	private String best;
 	private String myself;
+	private String admin;
 	
+	public String getAdmin() {
+		return admin;
+	}
+	public void setAdmin(String admin) {
+		this.admin = admin;
+	}
 	public String getEmail() {
 		return email;
 	}

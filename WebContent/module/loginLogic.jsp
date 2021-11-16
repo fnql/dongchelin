@@ -17,18 +17,26 @@
         
         // DB에서 아이디, 비밀번호 확인
         MemberBean dao = MemberBean.getInstance();
+        Member loginMem = new Member();
         int check = dao.loginCheck(id, pw);
         
         // URL 및 로그인관련 전달 메시지
         String msg = "";
+        String nickName = "";
+        String level = "";
         
         if(check == 1)    // 로그인 성공
         { 
             // 세션에 현재 아이디 세팅
+            loginMem = dao.getDB(id);
+            nickName = loginMem.getName();
+            level = loginMem.getAdmin();
+            session.setAttribute("datas", nickName);
             session.setAttribute("sessionID", id);
+            if (level.equals("admin")){
+            	session.setAttribute("ad", level);
+            }
             msg = "../index.jsp";
-            //Member mem = mb.getDB(member.getEmail());
-            //request.setAttribute("mb",mem);
         }
         else if(check == 0) // 비밀번호가 틀릴경우
         {

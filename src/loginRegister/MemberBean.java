@@ -101,7 +101,7 @@ public class MemberBean {
 	public boolean insertDB(Member member) {
 		connect();
 				
-		String sql ="insert into member(email,password,mfx,name,best,myself) values(?,?,?,?,?,?)";
+		String sql ="insert into member(email,password,mfx,name,best,myself,admin) values(?,?,?,?,?,?,?)";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -111,6 +111,7 @@ public class MemberBean {
 			pstmt.setString(4,member.getName());
 			pstmt.setString(5,member.getBest());
 			pstmt.setString(6,member.getMyself());
+			pstmt.setString(7,"user");
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -137,11 +138,12 @@ public class MemberBean {
 			// 데이터가 하나만 있으므로 rs.next()를 한번만 실행 한다.
 			rs.next();
 			member.setEmail(rs.getString("email"));
-			member.setPassword(rs.getString("password"));
+			member.setPassword(rs.getString("pw"));
 			member.setMfx(rs.getString("mfx"));
 			member.setName(rs.getString("name"));
 			member.setBest(rs.getString("best"));
 			member.setMyself(rs.getString("myself"));
+			member.setAdmin(rs.getString("admin"));
 			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();

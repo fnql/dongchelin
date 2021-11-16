@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="loginRegister.*, java.util.*"%>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<% request.setCharacterEncoding("utf-8"); %>
 <div id="navbar">
     <a href="#">맛집추천</a>
     <a href="#">자유게시판</a>
@@ -12,14 +13,25 @@
         <%}
         else // 로그인 했을 경우
         {
-        	
+        	if(session.getAttribute("ad") == null) {
     %>
-    <jsp:useBean id="mb" scope="request" class="loginRegister.Member" />
+    
     <h5>
-        <font color=#a0e9ff><%=session.getAttribute("sessionID") %></font>님<%=mb.getName()%>
+        <font color=#a0e9ff><%=session.getAttribute("datas") %></font>님
     </h5>
     <input type="button" value="로그아웃" onclick="logoutPro()" />
     
-    <%} %> 
+    <% } else{ %>
+    	<h5>
+        <font color=#a0e9ff><%= session.getAttribute("datas") %></font>님
+    </h5>
+    <input type="button" value="로그아웃" onclick="logoutPro()" />
+    <a href="admin.jsp">관리자</a>
+    	
+    <% } }%> 
     
 </div>
+<%
+		session.removeAttribute("MEMBERID");
+		response.sendRedirect("02loginForm.jsp");
+%>
