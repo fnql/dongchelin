@@ -41,16 +41,16 @@ public class MemberBean {
 		}
 	}
 	
-	private static MemberBean instance;
-    
-    // 싱글톤 패턴
-    private MemberBean(){}
-    
-    public static MemberBean getInstance(){
-        if(instance==null)
-            instance=new MemberBean();
-        return instance;
-    }
+//	private static MemberBean instance;
+//    
+//    // 싱글톤 패턴
+//    private MemberBean(){}
+//    
+//    public static MemberBean getInstance(){
+//        if(instance==null)
+//            instance=new MemberBean();
+//        return instance;
+//    }
 
 	
 	// 수정된 주소록 내용 갱신을 위한 메서드
@@ -167,7 +167,7 @@ public class MemberBean {
 				Member member = new Member();
 				
 				member.setEmail(rs.getString("email"));
-				member.setPassword(rs.getString("password"));
+				member.setPassword(rs.getString("pw"));
 				member.setMfx(rs.getString("mfx"));
 				member.setName(rs.getString("name"));
 				member.setBest(rs.getString("best"));

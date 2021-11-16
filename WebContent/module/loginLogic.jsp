@@ -16,7 +16,7 @@
         String pw = request.getParameter("password");
         
         // DB에서 아이디, 비밀번호 확인
-        MemberBean dao = MemberBean.getInstance();
+        MemberBean dao = new MemberBean();
         Member loginMem = new Member();
         int check = dao.loginCheck(id, pw);
         

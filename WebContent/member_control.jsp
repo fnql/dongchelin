@@ -3,8 +3,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <% request.setCharacterEncoding("utf-8"); %>
 
-<jsp:useBean id="mb" class="loginRegister.MemberBean"/> 
 <jsp:useBean id="member" class="loginRegister.Member"/>
+<jsp:useBean id="mbc" class="loginRegister.MemberBean"/> 
 <jsp:setProperty name="member" property="*"/> 
 <% 
 	// 컨트롤러 요청 파라미터
@@ -14,13 +14,13 @@
 	// 주소록 목록 요청인 경우
 
 	if(action.equals("list")) {
-		ArrayList<Member> datas = mb.getDBList();
+		ArrayList<Member> datas = mbc.getDBList();
 		request.setAttribute("data", datas);
-		pageContext.forward("memberList.jsp");
+		pageContext.forward("member_list.jsp");
 	}
 	// 주소록 등록 요청인 경우
 	else if(action.equals("insert")) {		
-		if(mb.insertDB(member)) {
+		if(mbc.insertDB(member)) {
 			response.sendRedirect("addrbook_control.jsp?action=list");
 		}
 		else
@@ -28,7 +28,7 @@
 	}
 	// 주소록 수정 페이지 요청인 경우
 	else if(action.equals("edit")) {
-		Member mem = mb.getDB(member.getEmail());
+		Member mem = mbc.getDB(member.getEmail());
 		if(!request.getParameter("upasswd").equals("1234")) {
 			out.println("<script>alert('비밀번호가 틀렸습니다.!!');history.go(-1);</script>");
 		}
@@ -39,7 +39,7 @@
 	}
 	// 주소록 수정 등록 요청인 경우
 	else if(action.equals("update")) {
-			if(mb.updateDB(member)) {
+			if(mbc.updateDB(member)) {
 				response.sendRedirect("addrbook_control.jsp?action=list");
 			}
 			else
@@ -47,7 +47,7 @@
 	}
 	// 주소록 삭제 요청인 경우
 	else if(action.equals("delete")) {
-		if(mb.deleteDB(member.getEmail())) {
+		if(mbc.deleteDB(member.getEmail())) {
 			response.sendRedirect("addrbook_control.jsp?action=list");
 		}
 		else
