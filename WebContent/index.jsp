@@ -13,8 +13,6 @@
   
   </head>
   <body>
-  todo: 로그인되면 별명으로 보이기
-  todo: admin=='admin'이면 관리자 메뉴
   <header class="main-header">
     <jsp:include page="module/top.jsp" flush="false" />
     <div class="headImg">

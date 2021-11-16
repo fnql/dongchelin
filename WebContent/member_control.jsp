@@ -15,8 +15,8 @@
 
 	if(action.equals("list")) {
 		ArrayList<Member> datas = mb.getDBList();
-		request.setAttribute("datas", datas);
-		pageContext.forward("member_list.jsp");
+		request.setAttribute("data", datas);
+		pageContext.forward("memberList.jsp");
 	}
 	// 주소록 등록 요청인 경우
 	else if(action.equals("insert")) {		

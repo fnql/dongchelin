@@ -19,19 +19,19 @@
     <h5>
         <font color=#a0e9ff><%=session.getAttribute("datas") %></font>님
     </h5>
-    <input type="button" value="로그아웃" onclick="logoutPro()" />
+    <form action="module/logoutLogic.jsp" method="get">
+			<input type="submit" value="로그아웃">
+	</form>	
     
     <% } else{ %>
     	<h5>
         <font color=#a0e9ff><%= session.getAttribute("datas") %></font>님
     </h5>
-    <input type="button" value="로그아웃" onclick="logoutPro()" />
+    <form action="module/logoutLogic.jsp" method="get">
+			<input type="submit" value="로그아웃">
+	</form>	
     <a href="admin.jsp">관리자</a>
-    	
+    
     <% } }%> 
     
 </div>
-<%
-		session.removeAttribute("MEMBERID");
-		response.sendRedirect("02loginForm.jsp");
-%>
