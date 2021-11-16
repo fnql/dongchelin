@@ -1,3 +1,4 @@
+<%@ page import="loginRegister.Member" %>
 <%@ page contentType="text/html; charset=utf-8"%>
 
 <html>
@@ -6,11 +7,11 @@
 <p><h2 align="center">동슐랭 회원가입</h2></p>
 
 <%-- 여기 페이지 추가하기 --%>
-<FORM  action="../member_control.jsp?action=insert" method="post">
+<FORM  action="member_control.jsp?action=update" method="post">
 <table width="50%" height="80" border="1" align="center" cellpadding="5" cellspacing="0" bordercolor="777999">
     <tr>
         <td colspan="2" align="center" bgcolor="skyblue">
-            <div style="font-weight: bold; font-size: 18px">회원 기본 정보
+            <div style="font-weight: bold; font-size: 18px">회원정보수정
             </div>
         </td>
     </tr>
@@ -19,9 +20,8 @@
             <div style="font-weight: bold;">아이디</div>
         </td>
         <td>
-        	<input type="text" name="memberid" size="12" maxlength="12">
-            	4~12자의 영문 대소문자와 숫자로만 입력
-        </td>
+        	<input type="text" name="memberid" size="12" maxlength="12" value="<%= ((Member)request.getParameter("userInfo")).getEmail()%>" disabled>
+        </td> 
     </tr>
     <tr>
         <td bgcolor="#afeeee" align="center"><div style="font-weight: bold;">비밀번호</div>
@@ -65,8 +65,7 @@
     </tr>
 </table>
     <p align="center">
-    	<input type="submit" value="회원 가입">
-    	<input type="reset" value="다시 입력">
+    	<input type="submit" value="회원정보수정">
     </FORM>
 </body>
 </html>

@@ -27,7 +27,7 @@ public class Member {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getMfx() {
+	public String getMfx( ) {
 		return mfx;
 	}
 	public void setMfx(String mfx) {

@@ -12,7 +12,7 @@ public class MemberBean {
 	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
 	String jdbc_url = "jdbc:mysql://localhost:3306/study?useUcode=true&characterEncoding=utf-8";
 	String dbUser = "root";
-	String dbPass = "1234";
+	String dbPass = "rkdals99";
 	// DB연결 메서드
 	void connect() {
 		try {
@@ -197,7 +197,7 @@ public class MemberBean {
 				pstmt.setString(1,id);
 				ResultSet rs = pstmt.executeQuery();
 	 
-	            if (rs.next()) // 입려된 아이디에 해당하는 비번 있을경우
+	            if (rs.next() ) // 입려된 아이디에 해당하는 비번 있을경우
 	            {
 	                dbPW = rs.getString("pw"); // 비번을 변수에 넣는다.
 	 

@@ -3,12 +3,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <% request.setCharacterEncoding("utf-8"); %>
 
-<jsp:useBean id="mb" class="loginRegister.MemberBean"/> 
 <jsp:useBean id="member" class="loginRegister.Member"/>
 <jsp:setProperty name="member" property="*"/> 
 <% 
 	// 컨트롤러 요청 파라미터
 	String action = request.getParameter("action");
+
+	MemberBean mb = MemberBean.getInstance();
 
 	// 파라미터에 따른 요청 처리
 	// 주소록 목록 요청인 경우
@@ -21,22 +22,26 @@
 	// 주소록 등록 요청인 경우
 	else if(action.equals("insert")) {		
 		if(mb.insertDB(member)) {
-			response.sendRedirect("addrbook_control.jsp?action=list");
+%>
+			<script>alert("회원가입이 완료되었습니다.");</script>
+<%
+			response.sendRedirect("module/login.jsp");
 		}
 		else
 			throw new Exception("DB 입력오류");
 	}
-	// 주소록 수정 페이지 요청인 경우
-	else if(action.equals("edit")) {
-		Member mem = mb.getDB(member.getEmail());
-		if(!request.getParameter("upasswd").equals("1234")) {
-			out.println("<script>alert('비밀번호가 틀렸습니다.!!');history.go(-1);</script>");
+
+	//업데이트할 회원 정보 가져오기
+	else if(action.equals("getUserinfo")){
+		Member info = mb.getDB(session.getAttribute("sessionID"));
+		if (info != null) {
+			request.setAttribute("userInfo", info);
+			pageContext.forward("module/modifyMember.jsp");
 		}
-		else {
-			request.setAttribute("mb",mem);
-			pageContext.forward("addrbook_edit_form.jsp");
-		}
+		else
+			throw new Exception("등록된 회원정보를 찾을 수 없습니다.");
 	}
+	
 	// 주소록 수정 등록 요청인 경우
 	else if(action.equals("update")) {
 			if(mb.updateDB(member)) {

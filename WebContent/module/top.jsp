@@ -15,9 +15,9 @@
         {
         	if(session.getAttribute("ad") == null) {
     %>
-    
+
     <h5>
-        <font color=#a0e9ff><%=session.getAttribute("datas") %></font>님
+        <font color=#a0e9ff><a href='member_control.jsp?action=getUserinfo'><%=session.getAttribute("sessionID") %></a></font>님<%=mb.getName()%>
     </h5>
     <input type="button" value="로그아웃" onclick="logoutPro()" />
     
@@ -27,8 +27,8 @@
     </h5>
     <input type="button" value="로그아웃" onclick="logoutPro()" />
     <a href="admin.jsp">관리자</a>
-    	
-    <% } }%> 
+
+    <% } }%>
     
 </div>
 <%
