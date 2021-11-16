@@ -3,3 +3,5 @@
 .classpath
 *.class
 .settings/
+.idea/
+dong.iml
