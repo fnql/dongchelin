@@ -8,12 +8,12 @@ public class MemberBean {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	
-	/* MySQL 연결정보 */
+	/* MySQL �뿰寃곗젙蹂� */
 	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
 	String jdbc_url = "jdbc:mysql://localhost:3306/study?useUcode=true&characterEncoding=utf-8";
 	String dbUser = "root";
-	String dbPass = "1234";
-	// DB연결 메서드
+	String dbPass = "rudflxla12";
+	// DB�뿰寃� 硫붿꽌�뱶
 	void connect() {
 		try {
 			Class.forName(jdbc_driver);
@@ -41,19 +41,7 @@ public class MemberBean {
 		}
 	}
 	
-//	private static MemberBean instance;
-//    
-//    // 싱글톤 패턴
-//    private MemberBean(){}
-//    
-//    public static MemberBean getInstance(){
-//        if(instance==null)
-//            instance=new MemberBean();
-//        return instance;
-//    }
-
-	
-	// 수정된 주소록 내용 갱신을 위한 메서드
+	// �닔�젙�맂 二쇱냼濡� �궡�슜 媛깆떊�쓣 �쐞�븳 硫붿꽌�뱶
 	public boolean updateDB(Member member) {
 		connect();
 		
@@ -77,7 +65,7 @@ public class MemberBean {
 		return true;
 	}
 	
-	// 특정 주소록 게시글 삭제 메서드
+	// �듅�젙 二쇱냼濡� 寃뚯떆湲� �궘�젣 硫붿꽌�뱶
 	public boolean deleteDB(String email) {
 		connect();
 		
@@ -97,17 +85,17 @@ public class MemberBean {
 		return true;
 	}
 	
-	// 신규 주소록 메시지 추가 메서드
+	// �떊洹� 二쇱냼濡� 硫붿떆吏� 異붽� 硫붿꽌�뱶
 	public boolean insertDB(Member member) {
 		connect();
 				
-		String sql ="insert into member(email,password,mfx,name,best,myself,admin) values(?,?,?,?,?,?,?)";
+		String sql ="insert into member(email,pw,mfx,name,best,myself,admin) values(?,?,?,?,?,?,?)";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1,member.getEmail());
 			pstmt.setString(2,member.getPassword());
-			pstmt.setString(3, member.getMfx());
+			pstmt.setString(3,member.getMfx());
 			pstmt.setString(4,member.getName());
 			pstmt.setString(5,member.getBest());
 			pstmt.setString(6,member.getMyself());
@@ -123,7 +111,7 @@ public class MemberBean {
 		return true;
 	}
 
-	// 특정 주소록 게시글 가져오는 메서드
+	// �듅�젙 二쇱냼濡� 寃뚯떆湲� 媛��졇�삤�뒗 硫붿꽌�뱶
 	public Member getDB(String email) {
 		connect();
 		
@@ -135,7 +123,7 @@ public class MemberBean {
 			pstmt.setString(1,email);
 			ResultSet rs = pstmt.executeQuery();
 			
-			// 데이터가 하나만 있으므로 rs.next()를 한번만 실행 한다.
+			// �뜲�씠�꽣媛� �븯�굹留� �엳�쑝誘�濡� rs.next()瑜� �븳踰덈쭔 �떎�뻾 �븳�떎.
 			rs.next();
 			member.setEmail(rs.getString("email"));
 			member.setPassword(rs.getString("pw"));
@@ -154,7 +142,7 @@ public class MemberBean {
 		return member;
 	}
 	
-	// 전체 주소록 목록을 가져오는 메서드
+	// �쟾泥� 二쇱냼濡� 紐⑸줉�쓣 媛��졇�삤�뒗 硫붿꽌�뱶
 	public ArrayList<Member> getDBList() {
 		connect();
 		ArrayList<Member> datas = new ArrayList<Member>();
@@ -172,6 +160,7 @@ public class MemberBean {
 				member.setName(rs.getString("name"));
 				member.setBest(rs.getString("best"));
 				member.setMyself(rs.getString("myself"));
+				member.setAdmin(rs.getString("admin"));
 				datas.add(member);
 			}
 			rs.close();
@@ -189,7 +178,7 @@ public class MemberBean {
 	    {
 		 	connect();
 		 	String sql="SELECT pw FROM member WHERE email=?"; 
-	        String dbPW = ""; // db에서 꺼낸 비밀번호를 담을 변수
+	        String dbPW = ""; // db�뿉�꽌 爰쇰궦 鍮꾨�踰덊샇瑜� �떞�쓣 蹂��닔
 	        int x = -1;
 	 
 	        try {
@@ -197,17 +186,17 @@ public class MemberBean {
 				pstmt.setString(1,id);
 				ResultSet rs = pstmt.executeQuery();
 	 
-	            if (rs.next()) // 입려된 아이디에 해당하는 비번 있을경우
+	            if (rs.next()) // �엯�젮�맂 �븘�씠�뵒�뿉 �빐�떦�븯�뒗 鍮꾨쾲 �엳�쓣寃쎌슦
 	            {
-	                dbPW = rs.getString("pw"); // 비번을 변수에 넣는다.
+	                dbPW = rs.getString("pw"); // 鍮꾨쾲�쓣 蹂��닔�뿉 �꽔�뒗�떎.
 	 
 	                if (dbPW.equals(pw)) 
-	                    x = 1; // 넘겨받은 비번과 꺼내온 배번 비교. 같으면 인증성공
+	                    x = 1; // �꽆寃⑤컺�� 鍮꾨쾲怨� 爰쇰궡�삩 諛곕쾲 鍮꾧탳. 媛숈쑝硫� �씤利앹꽦怨�
 	                else                  
-	                    x = 0; // DB의 비밀번호와 입력받은 비밀번호 다름, 인증실패
+	                    x = 0; // DB�쓽 鍮꾨�踰덊샇�� �엯�젰諛쏆� 鍮꾨�踰덊샇 �떎由�, �씤利앹떎�뙣
 	                
 	            } else {
-	                x = -1; // 해당 아이디가 없을 경우
+	                x = -1; // �빐�떦 �븘�씠�뵒媛� �뾾�쓣 寃쎌슦
 	            }
 	 
 	            return x;

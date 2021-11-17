@@ -19,9 +19,9 @@
 		pageContext.forward("member_list.jsp");
 	}
 	// 주소록 등록 요청인 경우
-	else if(action.equals("insert")) {		
+	else if(action.equals("insert")) {	
 		if(mbc.insertDB(member)) {
-			response.sendRedirect("addrbook_control.jsp?action=list");
+			response.sendRedirect("module/login.jsp");
 		}
 		else
 			throw new Exception("DB 입력오류");
