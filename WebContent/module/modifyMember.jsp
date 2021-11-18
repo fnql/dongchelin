@@ -20,7 +20,7 @@
             <div style="font-weight: bold;">아이디</div>
         </td>
         <td>
-        	<input type="text" name="memberid" size="12" maxlength="12" value="<%= ((Member)request.getParameter("userInfo")).getEmail()%>" disabled>
+    	<input type="text" name="memberid" size="12" maxlength="12" value="<%= ((Member)request.getParameter("userInfo")).getEmail()%>" disabled>   
         </td> 
     </tr>
     <tr>

@@ -187,11 +187,7 @@ public class MemberBean {
 				pstmt.setString(1,id);
 				ResultSet rs = pstmt.executeQuery();
 	 
-<<<<<<< HEAD
-	            if (rs.next() ) // 입려된 아이디에 해당하는 비번 있을경우
-=======
-	            if (rs.next()) // �엯�젮�맂 �븘�씠�뵒�뿉 �빐�떦�븯�뒗 鍮꾨쾲 �엳�쓣寃쎌슦
->>>>>>> origin/main
+	            if (rs.next() ) // 입력된 아이디에 해당하는 비번 있을경우
 	            {
 	                dbPW = rs.getString("pw"); // 鍮꾨쾲�쓣 蹂��닔�뿉 �꽔�뒗�떎.
 	 

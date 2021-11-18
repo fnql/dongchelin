@@ -54,5 +54,8 @@
 		out.println("<font color='red' size='5'>아이디를 확인해 주세요.</font>");
 	}
 	%>
+	<%-- 
+	세션저장
+	--%>
 </body>
 </html>

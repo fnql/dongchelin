@@ -17,7 +17,7 @@
     %>
 
     <h5>
-        <font color=#a0e9ff><a href='member_control.jsp?action=getUserinfo'><%=session.getAttribute("sessionID") %></a></font>님<%=mb.getName()%>
+        <font color=#a0e9ff><a href='member_control.jsp?action=getUserinfo'><%=session.getAttribute("sessionID") %></a></font>님
     </h5>
     <form action="module/logoutLogic.jsp" method="get">
 			<input type="submit" value="로그아웃">
