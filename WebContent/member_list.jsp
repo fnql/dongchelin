@@ -6,26 +6,23 @@
 
 <script type="text/javascript">
 	function check(email) {
-		pwd = prompt('수정/삭제 하려면 비밀번호를 넣으세요');
-		document.location.href="addrbook_control.jsp?action=edit&ab_id="+email+"&upasswd="+pwd;
-	}
+			}
 </script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>주소록:목록화면</title>
+<title>유저목록</title>
 
 </head>
 <jsp:useBean id="data" scope="request" class="java.util.ArrayList" />
 
 <body>
 <div align="center"> 
-<H2>주소록:목록화면</H2>
+<H2>유저목록</H2>
 <HR>
 <form>
-<a href="addrbook_form.jsp">주소록 등록</a><P>
-
+<a href="index.jsp">메인페이지</a><P>
 		<table border="1">
-			<tr><th>번호</th><th>이 름</th><th>전화번호</th><th>생 일</th><th>회 사</th><th>메 모</th></tr>
+			<tr><th>이메일</th><th>비밀번호</th><th>성별</th><th>별명</th><th>선호</th><th>자기소개</th><th>보안</th></tr>
 			<%
 				for(Member  mb : (ArrayList<Member>)data) {
 			%>
@@ -36,6 +33,7 @@
 				<td><%=mb.getName() %></td>
 				<td><%=mb.getBest() %></td>
 				<td><%=mb.getMyself() %></td>
+				<td><%=mb.getAdmin() %></td>
 			  </tr>
 			 <%
 				}
