@@ -10,7 +10,11 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey="></script>
 </head>
 <body>
+	<iframe src="https://map.kakao.com/link/to/고척동시골집,37.500636,126.867983" 
+		width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+	</iframe>
 	<div id="map" style="width:500px;height:400px;"></div>
+	
 	<script>
 		var container = document.getElementById('map');
 		var options = {
