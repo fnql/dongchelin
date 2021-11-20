@@ -7,22 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey="></script>
 </head>
 <body>
+	<h1>시골집</h1>
 	<iframe src="https://map.kakao.com/link/to/고척동시골집,37.500636,126.867983" 
 		width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
 	</iframe>
-	<div id="map" style="width:500px;height:400px;"></div>
-	
-	<script>
-		var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
-			level: 3
-		};
-
-		var map = new kakao.maps.Map(container, options);
-	</script>
+	<h2>동슐랭 별점 <img src="../img/star3.png"></h2>
+	<h2>추천 메뉴</h2>
+	<h2>추천 경로</h2>
+	<h2>한줄 리뷰</h2>
+	<h2>리뷰 글 검색</h2>
+	https://dawitblog.tistory.com/50 참고
 </body>
 </html>
