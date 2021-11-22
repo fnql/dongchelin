@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="loginRegister.*, java.util.*"%>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <% request.setCharacterEncoding("utf-8"); %>
+
 <div id="navbar">
-    <a href="#">맛집추천</a>
+    <a href="/dongchelin/index.jsp">메인페이지</a>
     <a href="#">자유게시판</a>
     <a href="#">리뷰게시판</a>
     <a href="#">배달가능식당</a>

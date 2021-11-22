@@ -29,7 +29,7 @@ body {
     background-position: center;
     background-size: cover;
 }
-p{
+.headText p{
     color: white;
     text-align: center;
     font-size: 40px;
@@ -57,7 +57,7 @@ p{
     padding: 16px;
   }
   
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  /*  */
   .sticky {
     position: fixed;
     top: 0;
@@ -68,3 +68,5 @@ p{
   .sticky + .content {
     padding-top: 60px;
   }
+
+  

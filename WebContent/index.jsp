@@ -42,7 +42,7 @@
       <tr>
         <td style="width: 30%;"><img alt="토마토김밥" src="img/토마토김밥.jpg".jpg" style="height: 400px; width: 100%;" /><h1>토마토김밥   <img src="img/star3.png"></h1></td>
         <td style="width: 30%;"><img alt="부대통령" src="img/부대통령.jpg" style="height: 400px; width: 100%;" /><h1>부대통령    <img src="img/star3.png"></h1></td>
-        <td style="width: 30%;"><img alt="시골집" src="img/sigol.png" style="height: 400px; width: 100%;" /><h1>시골집 &ensp;<img src="img/star3.png"></h1></td>
+        <td style="width: 30%;"><img alt="시골집" src="img/sigol.png" style="height: 400px; width: 100%;" /><h1><a href="shop/sigol.jsp">시골집 &ensp;</a></a><img src="img/star3.png"></h1></td>
       <tr>
     </table>
     <hr>
