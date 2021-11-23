@@ -29,13 +29,8 @@
 	// 주소록 수정 페이지 요청인 경우
 	else if(action.equals("edit")) {
 		Member mem = mbc.getDB(member.getEmail());
-		if(!request.getParameter("upasswd").equals("1234")) {
-			out.println("<script>alert('비밀번호가 틀렸습니다.!!');history.go(-1);</script>");
-		}
-		else {
-			request.setAttribute("mb",mem);
-			pageContext.forward("addrbook_edit_form.jsp");
-		}
+		request.setAttribute("mb",mem);
+		pageContext.forward("mypage_edit.jsp");
 	}
 	// 주소록 수정 등록 요청인 경우
 	else if(action.equals("update")) {

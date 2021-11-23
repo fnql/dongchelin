@@ -10,7 +10,7 @@
     <%
         if(session.getAttribute("sessionID") == null) // 로그인이 안되었을 때
         { %>
-        	<a href="module/login.jsp">로그인</a>
+        	<a href="/dongchelin/module/login.jsp">로그인</a>
         <%}
         else // 로그인 했을 경우
         {
@@ -18,19 +18,18 @@
     %>
     
     <h5>
-        <font color=#a0e9ff><%=session.getAttribute("datas") %></font>님
-    </h5>
-    <form action="module/logoutLogic.jsp" method="get">
-			<input type="submit" value="로그아웃">
+    <form action="/dongchelin/module/logoutLogic.jsp" method="get">
+			<p style = color:#a0e9ff;><%=session.getAttribute("datas") %>님
+			<input type="submit" value="로그아웃"></p>
 	</form>	
-    
+    </h5>
     <% } else{ %>
-    	<h5>
-        <font color=#a0e9ff><%= session.getAttribute("datas") %></font>님
-    </h5>
-    <form action="module/logoutLogic.jsp" method="get">
-			<input type="submit" value="로그아웃">
+    <h5>
+    <form action="/dongchelin/module/logoutLogic.jsp" method="get">
+			<a href="/dongchelin/mypage.jsp" style = color:#a0e9ff;><%=session.getAttribute("datas") %>님
+			<input type="submit" value="로그아웃"></a>
 	</form>	
+    </h5>
     <a href="admin.jsp">관리자</a>
     
     <% } }%> 
