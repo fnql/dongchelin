@@ -32,34 +32,40 @@
 <H2>마이페이지 수정</H2>
 <HR>
 [<a href=mypage.jsp>마이페이지로</a>] <p>
-<form name=form1 method=post action=addrbook_control.jsp>
+<form name=form1 method=post action=member_control.jsp>
 <input type=hidden name="mb_email" value="<%=mb.getEmail()%>">
 <input type=hidden name="action" value="update">
 
 <table border="1">
   <tr>
     <th>이 름</th>
-    <td><input type="text" name="ab_name" value="<%=mb.getName() %>"></td>
+    <td><input type="text" name="name" size="10" maxlength="10" value="<%=mb.getName() %>" required></td>
   </tr>
   <tr>
     <th>password</th>
-    <td><input type="text" name="ab_email" value="<%=mb.getPassword() %>"></td>
+    <td><input type="text" name="password" value="<%=mb.getPassword() %>"></td>
   </tr>
   <tr>
     <th>email</th>
-    <td><input type="text" name="ab_email" value="<%=mb.getEmail() %>"></td>
+    <td><input type="text" name="email" value="<%=mb.getEmail() %>" readonly></td>
   </tr>
     <tr>
     <th>성별</th>
-    <td><input type="text" name="ab_tel" value="<%=mb.getMfx() %>"></td>
+    <td>
+    	<input type="radio" name="mfx" value="male">남자
+    	<input type="radio" name="mfx" value="female" checked>여자<br/></td>
   </tr>
   <tr>
     <th>선호음식</th>
-    <td><input type="text" name="ab_comdept" value="<%=mb.getBest()%>"></td>
+    <td>
+        <input type="checkbox" name="best" value="한식" onclick="check_only(this)" checked>한식
+        <input type="checkbox" name="best" value="중식" onclick="check_only(this)">중식
+       	<input type="checkbox" name="best" value="일식" onclick="check_only(this)">일식
+    </td>
   </tr>
   <tr>
     <th>자기소개</th>
-    <td><input type="text" name="ab_memo" value="<%=mb.getMyself() %>"></td>
+    <td><input type="text" name="myself" value="<%=mb.getMyself() %>" size="30" maxlength="20"></td>
   </tr>
   <tr>
     <td colspan=2 align=center><input type=submit value="저장"><input type=reset value="취소"><input type="button" value="삭제" onClick="delcheck()"></td>

@@ -2,6 +2,7 @@
   <!DOCTYPE html>
   <html>
   <head>
+<link href="img/logo.png" rel="shortcut icon" type="image/x-icon">
   <meta charset="UTF-8">
   <title>동슐랭</title>
   <!-- 부트스트랩 css 사용 -->

@@ -9,6 +9,8 @@
 <% 
 	// 컨트롤러 요청 파라미터
 	String action = request.getParameter("action");
+	String mail = request.getParameter("email");
+	
 
 	// 파라미터에 따른 요청 처리
 	// 주소록 목록 요청인 경우
@@ -23,27 +25,40 @@
 		if(mbc.insertDB(member)) {
 			response.sendRedirect("module/login.jsp");
 		}
-		else
-			throw new Exception("DB 입력오류");
+		else{
+			%><script>
+				alert("이미 존재하는 아이디입니다.");
+				history.back();
+				</script><%
+		}
+			
 	}
 	// 주소록 수정 페이지 요청인 경우
 	else if(action.equals("edit")) {
-		Member mem = mbc.getDB(member.getEmail());
+		Member mem = mbc.getDB(mail);
 		request.setAttribute("mb",mem);
 		pageContext.forward("mypage_edit.jsp");
 	}
 	// 주소록 수정 등록 요청인 경우
 	else if(action.equals("update")) {
 			if(mbc.updateDB(member)) {
-				response.sendRedirect("addrbook_control.jsp?action=list");
+				session.setAttribute("datas", member.getName());
+				response.sendRedirect("index.jsp");
 			}
 			else
 				throw new Exception("DB 갱신오류");
 	}
 	// 주소록 삭제 요청인 경우
 	else if(action.equals("delete")) {
+		String mailck =  member.getEmail();
 		if(mbc.deleteDB(member.getEmail())) {
-			response.sendRedirect("addrbook_control.jsp?action=list");
+			System.out.print(mailck);
+			System.out.println((String)session.getAttribute("sessionID"));
+			if(mailck.equals((String)session.getAttribute("sessionID"))){
+				response.sendRedirect("/dongchelin/module/logoutLogic.jsp");
+			}
+			else
+				response.sendRedirect("index.jsp");
 		}
 		else
 			throw new Exception("DB 삭제 오류");

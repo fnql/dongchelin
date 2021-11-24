@@ -9,5 +9,6 @@
 <body>
 <jsp:include page="module/top.jsp" flush="false" />
 [<a href=mypage_edit.jsp>수정</a>]
+
 </body>
 </html>
