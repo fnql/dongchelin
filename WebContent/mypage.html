@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마이페이지</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+crossorigin="anonymous">
+</head>
+<body>
+<jsp:include page="module/top.jsp" flush="false" />
+[<a href=mypage_edit.jsp>수정</a>]
+<img src="img/default.png" alt="기본프로필">
+<h2>이름</h2>
+<h5>이메일</h5>
+<input type="text" readonly value="자기소개 칸">
+<div class="foodlist">
+    <p>지난 한달간 먹은 메뉴 리스트</p>
+</div>
+<h5>쉬는날</h5>
+<div class="husic">
+    <p>월화수목금</p>
+</div>
+<h4>최애 식당</h4>
+<a href="freetext.jsp">내가 쓴 리뷰</a>
+</body>
+</html>
