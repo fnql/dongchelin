@@ -12,8 +12,7 @@ public class MemberBean {
 	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
 	String jdbc_url = "jdbc:mysql://localhost:3306/study?useUcode=true&characterEncoding=utf-8";
 	String dbUser = "root";
-	String dbPass = "rkdals99";
-	// DB연결 메서드
+	String dbPass = "1234";
 	// DB�뿰寃� 硫붿꽌�뱶
 	void connect() {
 		try {
@@ -46,7 +45,7 @@ public class MemberBean {
 	public boolean updateDB(Member member) {
 		connect();
 		
-		String sql ="update member set pw=?, mfx=?, best=?, myself=? where email=?";		
+		String sql ="update member set pw=?, mfx=?, best=?, myself=?, name=? where email=?";		
 		 
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -54,7 +53,8 @@ public class MemberBean {
 			pstmt.setString(2,member.getMfx());
 			pstmt.setString(3, member.getBest());
 			pstmt.setString(4,member.getMyself());
-			pstmt.setString(5,member.getEmail());
+			pstmt.setString(5,member.getName());
+			pstmt.setString(6,member.getEmail());
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -103,7 +103,6 @@ public class MemberBean {
 			pstmt.setString(7,"user");
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
-			e.printStackTrace();
 			return false;
 		}
 		finally {

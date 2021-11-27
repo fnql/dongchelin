@@ -14,3 +14,13 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+var ctx = document.getElementById('myChart').getContext('2d'); 
+	var chart = new Chart(ctx, {  type: 'bar', // 
+		data: { 
+			labels: ['감','오렌지','사과'], 
+			datasets: [{ label: '식당 방문수', 
+			backgroundColor: 'rgb(255, 99, 132)', 
+			borderColor: 'rgb(255, 99, 132)', 
+			data: [2 ,10, 5,] }] }, 
+			});

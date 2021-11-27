@@ -57,9 +57,9 @@
     <tr>
         <td bgcolor="#afeeee" align="center"><div style="font-weight: bold;">선호 식당</div></td>
         <td>
-        		<input type="checkbox" name="best" value="KOREA" onclick="check_only(this)">한식
-        		<input type="checkbox" name="best" value="CHINA" onclick="check_only(this)">중식
-       	 		<input type="checkbox" name="best" value="JAPAN" onclick="check_only(this)">일식
+        		<input type="checkbox" name="best" value="한식" onclick="check_only(this)">한식
+        		<input type="checkbox" name="best" value="중식" onclick="check_only(this)">중식
+       	 		<input type="checkbox" name="best" value="일식" onclick="check_only(this)">일식
         </td>
     </tr>
     <tr>
