@@ -18,7 +18,7 @@
 	<h1>시골집</h1>
 	
     <div class='left-box'>
-      	<iframe src="https://map.kakao.com/?sName=+동양미래대학교+&eName=+고척동시골집" id="the_iframe" onload="calcHeight();" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;">
+      	<iframe src="https://map.kakao.com/?sName=+동양미래대학교+&eName=+고척동시골집&target=walk" id="the_iframe" onload="calcHeight();" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;">
 	</iframe>
 
         <br>

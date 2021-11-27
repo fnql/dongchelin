@@ -34,10 +34,15 @@
 			
 	}
 	// 주소록 수정 페이지 요청인 경우
-	else if(action.equals("edit")) {
+	else if(action.equals("edits")) {
 		Member mem = mbc.getDB(mail);
 		request.setAttribute("mb",mem);
 		pageContext.forward("mypage_edit.jsp");
+	}
+	else if(action.equals("edit")) {
+		Member mem = mbc.getDB(mail);
+		request.setAttribute("mb",mem);
+		pageContext.forward("mypage.jsp");
 	}
 	// 주소록 수정 등록 요청인 경우
 	else if(action.equals("update")) {

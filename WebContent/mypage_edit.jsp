@@ -31,7 +31,7 @@
 <div align="center">
 <H2>마이페이지 수정</H2>
 <HR>
-[<a href=mypage.jsp>마이페이지로</a>] <p>
+[<a href="member_control.jsp?action=edit&email=<%=session.getAttribute("sessionID") %>">마이페이지로</a>] <p>
 <form name=form1 method=post action=member_control.jsp>
 <input type=hidden name="mb_email" value="<%=mb.getEmail()%>">
 <input type=hidden name="action" value="update">

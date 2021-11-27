@@ -1,11 +1,11 @@
   /* 가게 소개용 */
   .left-box {
     float: left;
-    width: 50%;
+    width: 70%;
   }
   .right-box {
     float: right;
-    width: 48%;
+    width: 28%;
   }
   
   
