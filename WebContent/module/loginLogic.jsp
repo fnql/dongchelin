@@ -18,19 +18,25 @@
         // DB에서 아이디, 비밀번호 확인
         MemberBean dao = new MemberBean();
         Member loginMem = new Member();
+        Shop shop = new Shop();
+        ShopBean shopDao = new ShopBean();
         int check = dao.loginCheck(id, pw);
         
         // URL 및 로그인관련 전달 메시지
         String msg = "";
         String nickName = "";
         String level = "";
+        String visitShop ="";
         
         if(check == 1)    // 로그인 성공
         { 
             // 세션에 현재 아이디 세팅
             loginMem = dao.getDB(id);
+            shop = shopDao.getDB(id);
             nickName = loginMem.getName();
             level = loginMem.getAdmin();
+            visitShop = shop.getVisit();
+            session.setAttribute("visi", visitShop);
             session.setAttribute("datas", nickName);
             session.setAttribute("sessionID", id);
             if (level.equals("admin")){

@@ -51,7 +51,5 @@ public class Member {
 	public void setMyself(String myself) {
 		this.myself = myself;
 	}
-	
-
 
 }
