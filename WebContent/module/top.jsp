@@ -24,7 +24,12 @@
     		<%=session.getAttribute("datas") %><%=session.getAttribute("visi") %>님
     		    		<%
     			if(session.getAttribute("visi").equals("0")){
-    				//TODOS: windows.open사용해서 정보받기
+    				%> <script type="text/javascript">
+   						function viis(){
+   							window.open("index.jsp","visit","width=640,height=400")
+   						}
+   						viis();
+						</script><%
     			}
     		%>
 			<input type="submit" value="로그아웃"></a>
