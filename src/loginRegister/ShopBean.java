@@ -12,7 +12,7 @@ public class ShopBean {
 	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
 	String jdbc_url = "jdbc:mysql://localhost:3306/study?useUcode=true&characterEncoding=utf-8";
 	String dbUser = "root";
-	String dbPass = "admin";
+	String dbPass = "1234";
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
 	void connect() {
@@ -40,7 +40,7 @@ public class ShopBean {
 				e.printStackTrace();
 			}
 		}
-	}
+	}	
 	
 	public boolean updateDB(Shop shop) {
 		connect();
@@ -99,17 +99,13 @@ public class ShopBean {
 	public boolean insertDB(Shop shop) {
 		connect();
 				
-		String sql ="insert into eated(email,pw,mfx) values(?,?,?)";
+		String sql ="insert into eated(email,eat,visit) values(?,?,?)";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1,member.getEmail());
-			pstmt.setString(2,member.getPassword());
-			pstmt.setString(3,member.getMfx());
-			pstmt.setString(4,member.getName());
-			pstmt.setString(5,member.getBest());
-			pstmt.setString(6,member.getMyself());
-			pstmt.setString(7,"user");
+			pstmt.setString(1,shop.getEmail());
+			pstmt.setString(2,shop.getEat());
+			pstmt.setString(3,shop.getVisit());
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			return false;

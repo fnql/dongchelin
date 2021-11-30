@@ -1,14 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=ISO-2022-KR"
-    pageEncoding="ISO-2022-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>$)C9f9. =D4g!</title>
+<title>방문 식당!</title>
 </head>
 <body>
-<h3>$)C>nA& 8T@: A!=I =D4g@; 0q6sAV<<?d</h3>
-		<input type="radio" name="mfx" value="male">$)C32@Z
-    	<input type="radio" name="mfx" value="female">$)C?)@Z
+<h3>어제 먹은 점심 식당을 골라주세요</h3>
+<form method="post" action="index.jsp">
+		<input type="radio" name="eat" value="시골집">시골집<br>
+    	<input type="radio" name="eat" value="우마이">우마이<br>
+    	<input type="submit" value="확인" onClick="window.close()">
+</form>
 </body>
 </html>
