@@ -41,7 +41,7 @@
         </td>
         <td>
     	<input type="radio" name="mfx" value="male">남자
-    	<input type="radio" name="mfx" value="female">여자<br/></td>
+    	<input type="radio" name="mfx" value="female">여자<br></td>
 	</tr>
 
     <%-- 추가 정보 --%>
