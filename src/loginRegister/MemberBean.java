@@ -12,7 +12,7 @@ public class MemberBean {
 	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
 	String jdbc_url = "jdbc:mysql://localhost:3306/study?useUcode=true&characterEncoding=utf-8";
 	String dbUser = "root";
-	String dbPass = "rudflxla12";
+	String dbPass = "1234";
 	// DB�뿰寃� 硫붿꽌�뱶
 	void connect() {
 		try {

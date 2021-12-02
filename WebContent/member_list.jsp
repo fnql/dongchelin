@@ -27,7 +27,7 @@
 				for(Member  mb : (ArrayList<Member>)data) {
 			%>
 			  <tr>
-			   <td><a href="member_control.jsp?action=edit&email=<%=mb.getEmail()%>" style = color:#a0e9ff;>
+			   <td><a href="member_control.jsp?action=edits&email=<%=mb.getEmail()%>" style = color:#a0e9ff;>
     		<%=mb.getEmail()%></a></td>
 				<td><%=mb.getPassword() %></td>
 				<td><%=mb.getMfx() %></td>

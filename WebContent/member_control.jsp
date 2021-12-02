@@ -47,7 +47,7 @@
 	// 주소록 수정 등록 요청인 경우
 	else if(action.equals("update")) {
 			if(mbc.updateDB(member)) {
-				session.setAttribute("datas", member.getName());
+				//session.setAttribute("datas", member.getName());
 				response.sendRedirect("index.jsp");
 			}
 			else
