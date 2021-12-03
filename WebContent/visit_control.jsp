@@ -12,6 +12,7 @@
 
 	// 주소록 등록 요청인 경우
 	if(action.equals("insert")) {
+		//todos: 로그인 안하면 어제먹은 식당 등록 못하도록
 		shop.setEmail(session.getAttribute("sessionID").toString());
 		if(sb.insertDB(shop)) {
 			response.sendRedirect("visit_control.jsp?action=list");

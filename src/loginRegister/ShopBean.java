@@ -123,8 +123,8 @@ public class ShopBean {
 	public ArrayList<String> getDBList() {
 		connect();
 		ArrayList<String> sdatas = new ArrayList<String>();
-		
-		String sql = "select * from eated where email = 'db@naver.com' and visit between date_add(now(),interval -1 month) and now();";
+		//todos: 이메일 받아와서 해야함
+		String sql = "select * from eated where email = 'kim' and visit between date_add(now(),interval -1 month) and now();";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
