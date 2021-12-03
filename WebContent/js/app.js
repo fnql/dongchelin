@@ -14,15 +14,16 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
-
+var vi = name.substring(1,name.length-1);
+var vis = vi.split(',');
 var ctx = document.getElementById('myChart').getContext('2d'); 
 	var chart = new Chart(ctx, {  type: 'bar', // 
 		data: { 
-			labels: ['감','오렌지','사과'], 
+			labels: vis, 
 			datasets: [{ label: '식당 방문수', 
 			backgroundColor: 'rgb(255, 99, 132)', 
 			borderColor: 'rgb(255, 99, 132)', 
-			data: [2 ,10, 5,] }] }, 
+			data: [2 ,10, 5,15] }] }, 
 			});
 
 
@@ -30,5 +31,6 @@ var ctx = document.getElementById('myChart').getContext('2d');
     {
         var eat = $('#eat').val();
 		console.log(eat)
-        location.href='visit_control.jsp?eat='+eat;
+        location.href='visit_control.jsp?action=insert&eat='+eat;
     }
+    console.log(vis);

@@ -14,7 +14,8 @@ public class ShopBean {
 	String dbUser = "root";
 	String dbPass = "1234";
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
+	
+	
 	void connect() {
 		try {
 			Class.forName(jdbc_driver);
@@ -98,14 +99,14 @@ public class ShopBean {
 	
 	public boolean insertDB(Shop shop) {
 		connect();
-				
-		String sql ="insert into eated(email,eat,visit) values(?,?,?)";
+		LocalDate todaysDate = LocalDate.now();
+		todaysDate = todaysDate.minusDays(1);
+		String sql ="insert into eated(email,eat,visit) values(?,?,'"+todaysDate+"')";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1,shop.getEmail());
 			pstmt.setString(2,shop.getEat());
-			pstmt.setString(3,shop.getVisit());
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			return false;
@@ -114,6 +115,31 @@ public class ShopBean {
 			disconnect();
 		}
 		return true;
+	}
+	public boolean deleteDB(String email) {
+		return false;
+	}
+	
+	public ArrayList<String> getDBList() {
+		connect();
+		ArrayList<String> sdatas = new ArrayList<String>();
+		
+		String sql = "select * from eated where email = 'db@naver.com' and visit between date_add(now(),interval -1 month) and now();";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+				sdatas.add(rs.getString(2));
+			}
+			rs.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			disconnect();
+		}
+		return sdatas;
 	}
 
 }

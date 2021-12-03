@@ -24,6 +24,9 @@ crossorigin="anonymous">
 
 <div class='left-box' style="clear:both;">
 <h5>지난 한달간 먹은 메뉴 리스트</h5>
+<script language=javascript>
+var name = "<%= session.getAttribute("sdata") %>" ;
+</script>
 <canvas id="myChart"></canvas>
 </div>
 <div class='right-box'>
