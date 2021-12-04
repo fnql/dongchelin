@@ -27,6 +27,7 @@
         String nickName = "";
         String level = "";
         String visitShop ="";
+        String my = "";
         
         if(check == 1)    // 로그인 성공
         { 
@@ -35,9 +36,11 @@
             shop = shopDao.getDB(id);
             nickName = loginMem.getName();
             level = loginMem.getAdmin();
+            my = loginMem.getMyself();
             visitShop = shop.getVisit();
             session.setAttribute("visi", visitShop);
             session.setAttribute("datas", nickName);
+            session.setAttribute("my", my);
             session.setAttribute("sessionID", id);
             if (level.equals("admin")){
             	session.setAttribute("ad", level);

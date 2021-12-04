@@ -27,12 +27,23 @@ create table eated (
 );
 INSERT INTO eated VALUES ('db@naver.com','시골집',DATE_ADD(now(), INTERVAL -1 DAY));
 INSERT INTO eated VALUES ('db@naver.com','우마이',DATE_ADD(now(), INTERVAL -2 DAY));
-INSERT INTO eated VALUES ('kim','우마이',DATE_ADD(now(), INTERVAL -2 DAY));
+INSERT INTO eated VALUES ('kim','우마이', '2021-11-18');
+INSERT INTO eated VALUES ('kim','시골집','2021-11-19');
+INSERT INTO eated VALUES ('kim','전주식당', '2021-11-20');
+INSERT INTO eated VALUES ('kim','전주식당', '2021-11-17');
+INSERT INTO eated VALUES ('kim','전주식당', '2021-11-21');
+INSERT INTO eated VALUES ('kim','고척돈까스','2021-11-22');
+INSERT INTO eated VALUES ('kim','고척돈까스','2021-11-16');
+INSERT INTO eated VALUES ('kim','고척돈까스','2021-11-14');
+INSERT INTO eated VALUES ('kim','고척돈까스','2021-11-15');
+INSERT INTO eated VALUES ('kim','고척돈까스', '2021-11-23');
+INSERT INTO eated VALUES ('kim','닥터로빈','2021-11-24');
+INSERT INTO eated VALUES ('kim','닥터로빈','2021-11-28');
 select * from eated where email='db@naver.com';
 
 drop table if exists menuplus; 
 create table bestFood (
-id varchar(20) primary key not null,			-- 식당 구분 번호(타지역과 이름 겹침대비)
+id varchar(20) primary key not null,				-- 식당 구분 번호(타지역과 이름 겹침대비)
 name varchar(20),									-- 식당 상호명
 foodType varchar(20),								-- 식당 음식 종류(한식,일식...)
 price int,											-- 평균가격

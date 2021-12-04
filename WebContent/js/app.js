@@ -42,6 +42,7 @@ var ctx = document.getElementById('myChart').getContext('2d');
 
     function insertEat()
     {
+		var ea = document.querySelector('input[name="eat"]:checked').value; 
         var eat = $('#eat').val();
-        location.href='visit_control.jsp?action=insert&eat='+eat;
+        location.href='visit_control.jsp?action=insert&eat='+ea;
     }

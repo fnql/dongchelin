@@ -8,7 +8,7 @@
 <% 
 	// 컨트롤러 요청 파라미터
 	String action = request.getParameter("action");
-	String eat = request.getParameter("eat");
+	
 
 	// 주소록 등록 요청인 경우
 	if(action.equals("insert")) {

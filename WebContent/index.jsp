@@ -21,8 +21,11 @@
       <div class="headText">
         <h1 id="dong">동슐랭</h1>
         <p>솔직한 리뷰, 믿을 수 있는 평점!</p>
+        <form method=get action=/member_control.jsp>
         <input type="text" placeholder="맛집 검색">
         <input class="btn btn-primary" type="submit" value="검색" onclick="trackEvent('CLICK_KEYWORD_SEARCH');">
+        
+        </form>
         
       </div>
       <h4 id="clock">00:00:00</h4>

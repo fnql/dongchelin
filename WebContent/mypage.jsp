@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" %>
+    <%@ page import="java.util.*" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,14 +18,15 @@ crossorigin="anonymous">
 [<a href="member_control.jsp?action=edits&email=<%=session.getAttribute("sessionID") %>">수정</a>]
 <div>
 <img src="img/default.png" alt="기본프로필" style="float:left;">
-<h2><%=mb.getName()%></h2>
-<h5><%=mb.getEmail()%></h5>
-<input type="text" readonly value="<%=mb.getMyself() %>">
+<h2><%=session.getAttribute("datas") %></h2>
+<h5><%=session.getAttribute("sessionID") %></h5>
+<input type="text" readonly value="<%=session.getAttribute("my") %>"><br>
+<button style="margin-top: 20px;" data-toggle="modal" data-target="#insertBlack" class="btn btn-danger">메뉴 추가</button>
 </div>
 
 <div class='left-box' style="clear:both;">
 <h5>지난 한달간 먹은 메뉴 리스트</h5>
-<button data-toggle="modal" data-target="#insertBlack" class="btn btn-danger">블랙</button>
+
 <div class="modal fade" id="insertBlack" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -34,6 +36,9 @@ crossorigin="anonymous">
       <div class="modal-body">
         <input type="radio" id="eat" name="eat" value="시골집">시골집
     	<input type="radio" id="eat" name="eat" value="우마이">우마이<br>
+    	<input type="radio" name="eat" value="전주식당">전주식당<br>
+    	<input type="radio" name="eat" value="고척돈까스">고척돈까스<br>
+    	<input type="radio" name="eat" value="닥터로빈">닥터로빈<br>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -42,6 +47,12 @@ crossorigin="anonymous">
     </div>
   </div></div>
 <!-- 먹은 음식 제대로 안들어감, 페이지로드시 회원정보 날아감 --> 
+<%
+	String data = session.getAttribute("sdata").toString();
+	String vi = data.substring(1,data.length()-1);
+	String[] vis = vi.split(",");
+	Random ran = new Random();
+%>
 <script language=javascript>
 var name = "<%= session.getAttribute("sdata") %>" ;
 </script>
