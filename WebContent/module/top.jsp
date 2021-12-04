@@ -21,8 +21,7 @@
     <h5>
     <form action="/dongchelin/module/logoutLogic.jsp" method="get">
 			<a href="/dongchelin/member_control.jsp?action=edit&email=<%=session.getAttribute("sessionID") %>" style = color:#a0e9ff;>
-    		<%=session.getAttribute("datas") %><%=session.getAttribute("visi") %>님
-    		
+    		<%=session.getAttribute("datas") %>님
 			<input type="submit" value="로그아웃"></a>
 	</form>	
     </h5>
@@ -30,12 +29,8 @@
     <h5>
     <form action="/dongchelin/module/logoutLogic.jsp" method="get">
     		<a href="/dongchelin/member_control.jsp?action=edit&email=<%=session.getAttribute("sessionID") %>" style = color:#a0e9ff;>
-    		<%=session.getAttribute("datas") %><%=session.getAttribute("visi") %>님
-    		<%
-    			if(session.getAttribute("visi").equals("0")){
-    				
-    			}
-    		%>
+    		<%=session.getAttribute("datas") %>님
+
 			<input type="submit" value="로그아웃"></a>
 	</form>	
     </h5>

@@ -24,6 +24,24 @@ crossorigin="anonymous">
 
 <div class='left-box' style="clear:both;">
 <h5>지난 한달간 먹은 메뉴 리스트</h5>
+<button data-toggle="modal" data-target="#insertBlack" class="btn btn-danger">블랙</button>
+<div class="modal fade" id="insertBlack" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">어제 점심은? </h5>
+      </div>
+      <div class="modal-body">
+        <input type="radio" id="eat" name="eat" value="시골집">시골집
+    	<input type="radio" id="eat" name="eat" value="우마이">우마이<br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+        <button type="button" class="btn btn-primary" onclick="insertEat();">확인</button>
+      </div>
+    </div>
+  </div></div>
+<!-- 먹은 음식 제대로 안들어감, 페이지로드시 회원정보 날아감 --> 
 <script language=javascript>
 var name = "<%= session.getAttribute("sdata") %>" ;
 </script>
@@ -37,7 +55,9 @@ var name = "<%= session.getAttribute("sdata") %>" ;
 <h5>최애 식당</h5>
 <a href="freetext.jsp">내가 쓴 리뷰</a>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 </body>

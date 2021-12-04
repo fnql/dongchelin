@@ -28,8 +28,7 @@
 	else if(action.equals("list")) {
 		ArrayList<String> sdatas = sb.getDBList();
 		session.setAttribute("sdata", sdatas);
-		System.out.print(sdatas);
-		pageContext.forward("index.jsp");
+		pageContext.forward("mypage.jsp");
 	}
 	// 주소록 수정 등록 요청인 경우
 	else if(action.equals("update")) {

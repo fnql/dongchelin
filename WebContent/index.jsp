@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <title>동슐랭</title>
   <!-- 부트스트랩 css 사용 -->
+  
   <link rel="stylesheet" 
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
@@ -27,23 +28,6 @@
       <h4 id="clock">00:00:00</h4>
     </div>
   </header>
-<button data-toggle="modal" data-target="#insertBlack" class="btn btn-danger">블랙</button>
-<div class="modal fade" id="insertBlack" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">어제 점심은? </h5>
-      </div>
-      <div class="modal-body">
-        <input type="radio" id="eat" name="eat" value="시골집">시골집
-    	<input type="radio" id="eat" name="eat" value="우마이">우마이<br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-        <button type="button" class="btn btn-primary" onclick="insertEat();">확인</button>
-      </div>
-    </div>
-  </div></div>
 
     <hr>
     <h1 id="pla">동슐랭 선정 맛집</h1>
@@ -95,7 +79,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/clock.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     
