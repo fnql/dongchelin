@@ -8,11 +8,12 @@
 <% 
 	// 컨트롤러 요청 파라미터
 	String action = request.getParameter("action");
-	
-
+	String eat = request.getParameter("eat");
+	String vv = request.getParameter("visit");
 	// 주소록 등록 요청인 경우
 	if(action.equals("insert")) {
 		//todos: 로그인 안하면 어제먹은 식당 등록 못하도록
+		System.out.println(vv);
 		shop.setEmail(session.getAttribute("sessionID").toString());
 		if(sb.insertDB(shop)) {
 			response.sendRedirect("visit_control.jsp?action=list");
@@ -23,7 +24,6 @@
 				history.back();
 				</script><%
 		}
-			
 	}
 	else if(action.equals("list")) {
 		ArrayList<String> sdatas = sb.getDBList();

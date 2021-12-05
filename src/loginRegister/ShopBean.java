@@ -99,14 +99,13 @@ public class ShopBean {
 	
 	public boolean insertDB(Shop shop) {
 		connect();
-		LocalDate todaysDate = LocalDate.now();
-		todaysDate = todaysDate.minusDays(1);
-		String sql ="insert into eated(email,eat,visit) values(?,?,'"+todaysDate+"')";
+		String sql ="insert into eated(email,eat,visit) values(?,?,?)";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1,shop.getEmail());
 			pstmt.setString(2,shop.getEat());
+			pstmt.setString(3,shop.getVisit());
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			return false;

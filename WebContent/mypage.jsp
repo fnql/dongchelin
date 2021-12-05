@@ -34,11 +34,14 @@ crossorigin="anonymous">
         <h5 class="modal-title" id="myModalLabel">어제 점심은? </h5>
       </div>
       <div class="modal-body">
-        <input type="radio" id="eat" name="eat" value="시골집">시골집
-    	<input type="radio" id="eat" name="eat" value="우마이">우마이<br>
+        <input type="radio" name="eat" value="시골집">시골집<br>
+    	<input type="radio" name="eat" value="우마이">우마이<br>
     	<input type="radio" name="eat" value="전주식당">전주식당<br>
     	<input type="radio" name="eat" value="고척돈까스">고척돈까스<br>
     	<input type="radio" name="eat" value="닥터로빈">닥터로빈<br>
+    	<input type="radio" name="eat" value="부대통령뚝배기">부대통령<br>
+    	<hr>
+    	<input type='date' name='visit' value='2021-12-25'/>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -48,10 +51,15 @@ crossorigin="anonymous">
   </div></div>
 <!-- 먹은 음식 제대로 안들어감, 페이지로드시 회원정보 날아감 --> 
 <%
-	String data = session.getAttribute("sdata").toString();
+	if (session.getAttribute("sdata")!=null){
+		String data = session.getAttribute("sdata").toString();
 	String vi = data.substring(1,data.length()-1);
 	String[] vis = vi.split(",");
 	Random ran = new Random();
+	int a = ran.nextInt(vis.length-1);
+	
+	}
+
 %>
 <script language=javascript>
 var name = "<%= session.getAttribute("sdata") %>" ;

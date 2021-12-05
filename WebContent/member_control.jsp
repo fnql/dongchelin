@@ -10,6 +10,7 @@
 	// 컨트롤러 요청 파라미터
 	String action = request.getParameter("action");
 	String mail = request.getParameter("email");
+	String sr = request.getParameter("sa");
 	
 
 	// 파라미터에 따른 요청 처리
@@ -42,7 +43,7 @@
 	else if(action.equals("edit")) {
 		Member mem = mbc.getDB(mail);
 		request.setAttribute("mb",mem);
-		pageContext.forward("mypage.jsp");
+		pageContext.forward("visit_control.jsp?action=list");
 	}
 	// 주소록 수정 등록 요청인 경우
 	else if(action.equals("update")) {
@@ -68,7 +69,16 @@
 		else
 			throw new Exception("DB 삭제 오류");
 	}
+	else if(action.equals("search")) {
+		if (sr.equals("시골집") || sr.equals("시골")|| sr.equals("tlrhf")|| sr.equals("tlrhfwlq")){
+			response.sendRedirect("/dongchelin/shop/sigol.jsp");
+		}
+		else{
+			response.sendRedirect("/dongchelin/index.jsp");
+		}
+}
 	else {
 		out.println("<script>alert('action 파라미터를 확인해 주세요!!!')</script>");
 	}
+	
 %>

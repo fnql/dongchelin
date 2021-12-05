@@ -40,9 +40,11 @@ var ctx = document.getElementById('myChart').getContext('2d');
 			});
 
 
-    function insertEat()
-    {
-		var ea = document.querySelector('input[name="eat"]:checked').value; 
-        var eat = $('#eat').val();
-        location.href='visit_control.jsp?action=insert&eat='+ea;
-    }
+function insertEat()
+  {
+	var ea = document.querySelector('input[name="eat"]:checked').value; 
+	var dateControl = document.querySelector('input[type="date"]').value;
+    var eat = $('#eat').val();
+    var visit = $('#visit').val();
+    location.href='visit_control.jsp?action=insert&eat='+ea + '&visit='+dateControl;
+  }
