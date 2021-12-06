@@ -1,7 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" %>
 <%@ page import="board.*" %>
 <%@ page import="java.util.*" %>
+<% request.setCharacterEncoding("utf-8"); %>
 
 <jsp:useBean id="dao" class="board.DAO"/>
 
@@ -11,8 +12,8 @@
 	int size = alist.size();
 	int size2 = size;
 	
-	final int ROWSIZE = 4;
-	final int BLOCK = 5;
+	final int ROWSIZE = 10;
+	final int BLOCK = 11;
 	int indent = 0;
 
 	int pg = 1;
@@ -43,29 +44,56 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
- <head>
- <title>°Ô½ÃÆÇ</title>
+<head>
+<link href="/img/logo.png" rel="shortcut icon" type="image/x-icon">
+
+ <title>ê²Œì‹œíŒ</title>
+ <link rel="stylesheet" href="/dongchelin/css/style.css">
+<link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+crossorigin="anonymous">
  </head>
  <body>
+  <jsp:include page="/module/top.jsp" flush="false" />
+   <div class="container">
+		<div class="row">
+			<form method="post" name="search" action="searchshop.jsp">
+				<table class="pull-right">
+					<tr>
+						<td><select class="form-control" name="searchField">
+								<option value="0">ì„ íƒ</option>
+								<option value="bbsTitle">ì œëª©</option>
+								<option value="shop">ì‹ë‹¹</option>
+						</select></td>
+						<td><input type="text" class="form-control"
+							placeholder="ê²€ìƒ‰ì–´ ì…ë ¥" name="searchText" maxlength="100"></td>
+						<td><button type="submit" class="btn btn-success">ê²€ìƒ‰</button></td>
+					</tr>
+
+				</table>
+			</form>
+		</div>
+	</div>
 <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr height="5"><td width="5"></td></tr>
  <tr style="background:url('/dongchelin/img/table_mid.gif') repeat-x; text-align:center;">
    <td width="5"><img src="/dongchelin/img/table_left.gif" width="5" height="30" /></td>
-   <td width="23">¹øÈ£</td>
-   <td width="375">Á¦¸ñ</td>
-   <td width="73">ÀÛ¼ºÀÚ</td>
-   <td width="164">ÀÛ¼ºÀÏ</td>
-   <td width="58">Á¶È¸¼ö</td>
+   <td width="23">ë²ˆí˜¸</td>
+   <td width="375">ì œëª©</td>
+   <td width="180">ì¢…ë¥˜</td>
+   <td width="73">ì‘ì„±ì</td>
+   <td width="58">ì¡°íšŒìˆ˜</td>
    <td width="7"><img src="/dongchelin/img/table_right.gif" width="5" height="30" /></td>
   </tr>
 <%
-	if(total==0) {
+	if(total==0) {			// ìë£Œê°€ ì—†ë‹¤ë©´
 %>
 	 		<tr align="center" bgcolor="#FFFFFF" height="30">
-	 	   <td colspan="6">µî·ÏµÈ ±ÛÀÌ ¾ø½À´Ï´Ù.</td>
+	 	   <td colspan="6">ë“±ë¡ëœ ê¸€ì´ ì—†ìŠµë‹ˆë‹¤.</td>
 	 	  </tr>
 	 <%
-	 	} else {
+	 	} else {			// ìë£Œê°€ 1ê°œ ì´ìƒ ìˆì„ê²½ìš°
 	 		for(int i=ROWSIZE*(pg-1); i<end;i++){
 				VO vo = alist.get(i);
 				indent = vo.getIndent();
@@ -76,23 +104,28 @@
 	<td align="center"><%=idx%></td>
 	<td align="left"><% 
 		
-		for(int j=0;j<indent;j++){
+		
+		for(int j=0;j<indent;j++){ 						//ë‹µê¸€ ì½ëŠ” ëª…ë ¹ì–´
 		%> &nbsp;&nbsp;&nbsp;<%
 		}
 		if(indent!=0){
-			%><img src='img/reply_icon.gif' /><%
+			%><img src='/dongchelin/img/reply_icon.gif' width="40" height="15"/><%
 		}
 	%>
-	<a href="view.jsp?idx=<%=idx%>&pg=<%=pg%>"><%=vo.getTitle() %></a><%
-		if(vo.isDayNew()){
-			%>
-			<img src='img/new.jpg' />
-			<%
-		}
-	%></td>
+	<%-- ë‹µê¸€ ì œëª© --%>
+	<a href="view.jsp?idx=<%=idx%>&pg=<%=pg%>"><%=vo.getTitle() %></a>
+	
+	</td>
+	
+	<%-- ì¢…ë¥˜ --%>
+	<td align="center"><%=vo.getChecklist()%></td>
+	
+	<%-- ì‘ì„±ì --%>
    <td align="center"><%=vo.getName()%></td>
-   <td align="center"><%=vo.getTime() %></td>
+   
+   <%-- ì¡°íšŒìˆ˜ --%>
    <td align="center"><%=vo.getHit() %></td>
+   
    <td align="center">&nbsp;</td>
   <tr height="1" bgcolor="#D2D2D2"><td colspan="6"></td></tr>
 <% }} %>
@@ -105,8 +138,8 @@
 		<%
 			if(pg>BLOCK) {
 		%>
-			[<a href="list.jsp?pg=1">¢¸¢¸</a>]
-			[<a href="list.jsp?pg=<%=startPage-1%>">¢¸</a>]
+			[<a href="list.jsp?pg=1">â—€â—€</a>]
+			[<a href="list.jsp?pg=<%=startPage-1%>">â—€</a>]
 		<%
 			}
 		%>
@@ -128,16 +161,18 @@
 		<%
 			if(endPage<allPage){
 		%>
-			[<a href="list.jsp?pg=<%=endPage+1%>">¢º</a>]
-			[<a href="list.jsp?pg=<%=allPage%>">¢º¢º</a>]
+			[<a href="list.jsp?pg=<%=endPage+1%>">â–¶</a>]
+			[<a href="list.jsp?pg=<%=allPage%>">â–¶â–¶</a>]
 		<%
 			}
 		%>
 		</td>
 		</tr>
 	<tr align="center">
-   <td><input type=button value="±Û¾²±â" OnClick="window.location='write.jsp'"></td>
+   <td><input type=button value="ê¸€ì“°ê¸°" OnClick="window.location='write.jsp'"></td>
   </tr>
  </table>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
  </body>
 </html>

@@ -57,12 +57,17 @@ crossorigin="anonymous">
 	String[] vis = vi.split(",");
 	Random ran = new Random();
 	int a = ran.nextInt(vis.length-1);
-	
+	System.out.println(vis[a]);
+	session.setAttribute("ranEat", vis[a]);
 	}
 
 %>
 <script language=javascript>
 var name = "<%= session.getAttribute("sdata") %>" ;
+window.setTimeout(function(){
+    alert("오늘 추천 식당 : <%= session.getAttribute("ranEat") %>");
+}, 200);
+
 </script>
 <canvas id="myChart"></canvas>
 </div>

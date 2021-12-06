@@ -5,8 +5,8 @@
 
 <div id="navbar">
     <a href="/dongchelin/index.jsp">메인페이지</a>
-     <a href="/dongchelin/gesi/list.jsp">자유게시판</a>
-    <a href="#">리뷰게시판</a>
+     <a href="#">자유게시판</a>
+    <a href="/dongchelin/gesi/list.jsp">리뷰게시판</a>
     <a href="#">배달가능식당</a>
     <%
         if(session.getAttribute("sessionID") == null) // 로그인이 안되었을 때

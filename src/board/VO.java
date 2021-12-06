@@ -1,38 +1,24 @@
 package board;
 
 public class VO {
-	private int num;
-	private String name;
-	private String password;
-	private String title;
-	private String memo;
-	private String time;
-	private int hit;
-	private int ref;
-	private int indent;
+	private int num;			//번호
+	private String name;		//이름
+	private String password;	//비밀번호
+	private String title;		//제목
+	private String memo;		//내용
+	private String time;		//시간 -- 오류있음
+	private int hit;			//조회수
+	private int ref;			
+	private int indent;			//답글
 	private int step;
 	private boolean dayNew;
-	
+	private String checklist;	
+	private String shop;
 
 	public VO() {
 		
 	}
-	
-	public VO(int num, String name, String password, String title,
-			String memo, String time, int hit, int ref, int indent, int step, boolean dayNew) {
-	this.num = num;
-	this.name = name;
-	this.password = password;
-	this.title = title;
-	this.memo = memo;
-	this.time = time;
-	this.hit = hit;
-	this.ref = ref;
-	this.indent = indent;
-	this.step = step;
-	this.dayNew = dayNew;
-	}
-	
+
 	public int getNum() {
 		return num;
 	}
@@ -117,8 +103,25 @@ public class VO {
 		return dayNew;
 	}
 
+	public String getShop() {
+		return shop;
+	}
+
+	public void setShop(String shop) {
+		this.shop = shop;
+	}
+
 	public void setDayNew(boolean dayNew) {
 		this.dayNew = dayNew;
 	}
 
+	public String getChecklist() {
+		return checklist;
+	}
+
+	public void setChecklist(String checklist) {
+		this.checklist = checklist;
+	}
+	
+	
 }

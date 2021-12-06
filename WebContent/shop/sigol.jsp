@@ -28,7 +28,18 @@
 	    <h2>동슐랭 별점</h2> <img src="../img/star3.png" style="margin-bottom:70px;'">
 	    <h2>추천 메뉴</h2> <ul><li>백반 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.7</li><li>누룽지탕 &nbsp;&nbsp;0.5</li><li>닭도리탕 &nbsp;&nbsp;2.5</li></ul>
 	    <h2 style="margin-top: 70px;">추천 경로</h2> <p style="margin-left: 20px; margin-bottom: 100px;">5호관 출발 시 1분 소요</p>
-        <a href="review.jsp"><h2>리뷰 글 검색</h2></a>
+        <form method="post" name="search" action="/dongchelin/gesi/searchshop.jsp">
+				<table class="pull-right">
+					<tr>
+						<td><input type="text" class="form-control"
+							name="searchField" maxlength="100" value="shop" style="display:none"></td>
+						<td><input type="text" class="form-control"
+							name="searchText" maxlength="100" value="시골집" style="display:none"></td>
+						<td><button type="submit" class="btn btn-success">리뷰 글 검색</button></td>
+					</tr>
+
+				</table>
+			</form>
     </div>
 	
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=abb0c5392e88307fec21ccc5d3ef776a"></script>

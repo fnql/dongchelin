@@ -63,20 +63,43 @@ function writeCheck()
       <td><input name="title" size="50" maxlength="100"></td>
       <td>&nbsp;</td>
      </tr>
+     
      <tr height="1" bgcolor="#dddddd"><td colspan="4"></td></tr>
-    <tr>
+    	<tr>
       <td>&nbsp;</td>
       <td align="center">이름</td>
       <td><input name="name" size="50" maxlength="50"></td>
       <td>&nbsp;</td>
-     </tr>
+     	</tr>
+     	
       <tr height="1" bgcolor="#dddddd"><td colspan="4"></td></tr>
-    <tr>
+    	<tr>
       <td>&nbsp;</td>
       <td align="center">비밀번호</td>
       <td><input type="password" name="password" size="50" maxlength="50"></td>
       <td>&nbsp;</td>
      </tr>
+     <tr height="1" bgcolor="#dddddd"><td colspan="4"></td></tr>
+    	<tr>
+      <td>&nbsp;</td>
+      <td align="center">가게명</td>
+      <td><input name="shop" size="50" maxlength="50"></td>
+      <td>&nbsp;</td>
+     	</tr>
+     
+      <tr height="1" bgcolor="#dddddd"><td colspan="4"></td></tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td align="center">음식종류</td>
+      <td>
+      	<input type="radio" name="checklist" size="50" maxlength="50" value='koreafood' id='kfood'><label for='kfood'>한식</label>
+      	<input type="radio" name="checklist" size="50" maxlength="50" value='chinafood' id='cfood'><label for='cfood'>중식</label>
+      	<input type="radio" name="checklist" size="50" maxlength="50" value='japanfood' id='jfood'><label for='jfood'>일식</label>
+      	<input type="radio" name="checklist" size="50" maxlength="50" value='datefood' id='dfood'><label for='dfood'>데이트추천식당</label>
+      </td>
+      <td>&nbsp;</td>
+     </tr>
+     
      <tr height="1" bgcolor="#dddddd"><td colspan="4"></td></tr>
      <tr>
       <td>&nbsp;</td>
