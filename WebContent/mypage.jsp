@@ -66,17 +66,17 @@ crossorigin="anonymous">
 var name = "<%= session.getAttribute("sdata") %>" ;
 window.setTimeout(function(){
     alert("오늘 추천 식당 : <%= session.getAttribute("ranEat") %>");
-}, 200);
+}, 700);
 
 </script>
 <canvas id="myChart"></canvas>
 </div>
 <div class='right-box'>
-<h5>쉬는날</h5>
+<h3>쉬는날</h3>
 <div class="husic">
     <p>월화수목금</p>
 </div>
-<h5>최애 식당</h5>
+<h3>최애 식당</h3>
 <a href="freetext.jsp">내가 쓴 리뷰</a>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
