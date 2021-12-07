@@ -16,10 +16,10 @@
  <title>게시판</title>
  </head>
  <body>
-<table>
+<table style="margin-left:30%;">
   <tr>
    <td>
-    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <table style="margin-left:30%;" cellpadding="0" cellspacing="0" border="0" >
      <tr style="background:url('img/table_mid.gif') repeat-x; text-align:center;">
       <td width="5"><img src="img/table_left.gif" width="5" height="30" /></td>
       <td>내 용</td>
@@ -27,7 +27,7 @@
      </tr>
     </table>
     <tr height="1" bgcolor="#dddddd"><td colspan="4" width="407"></td></tr>
-   <table width="413">
+   <table style="margin-left:30%;">
      <tr>
       <td width="0">&nbsp;</td>
       <td align="center" width="76">글번호</td>

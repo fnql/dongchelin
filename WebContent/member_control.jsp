@@ -73,6 +73,9 @@
 		if (sr.equals("시골집") || sr.equals("시골")|| sr.equals("tlrhf")|| sr.equals("tlrhfwlq")){
 			response.sendRedirect("/dongchelin/shop/sigol.jsp");
 		}
+		else if(sr.equals("홍콩반점") || sr.equals("홍콩")|| sr.equals("ghdzhd")|| sr.equals("ghdzhdqkswja")) {
+			response.sendRedirect("/dongchelin/shop/hong.jsp");
+		}
 		else{
 			response.sendRedirect("/dongchelin/index.jsp");
 		}

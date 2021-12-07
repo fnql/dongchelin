@@ -11,6 +11,7 @@
 href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
 integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
 crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
 </head>
 <jsp:useBean id="mb" scope="request" class="loginRegister.Member" />
 <body>
@@ -58,10 +59,9 @@ crossorigin="anonymous">
 	String[] vis = vi.split(",");
 	Random ran = new Random();
 	int a = ran.nextInt(vis.length-1);
-	System.out.println(vis[a]);
 	session.setAttribute("ranEat", vis[a]);
 	}
-
+	
 %>
 <script language=javascript>
 var name = "<%= session.getAttribute("sdata") %>" ;
@@ -75,7 +75,7 @@ window.setTimeout(function(){
 <div class='right-box'>
 <h3>쉬는날</h3>
 <div class="husic">
-    <p>월화수목금</p>
+    <p style="font-family:궁서; font-size:30px; margin-left:30px">월&nbsp;&nbsp;화&nbsp;&nbsp;수&nbsp;&nbsp;목&nbsp;&nbsp;금</p>
 </div>
 <h3>최애 식당</h3>
 <a href="freetext.jsp">내가 쓴 리뷰</a>

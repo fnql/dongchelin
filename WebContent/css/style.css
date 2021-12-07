@@ -2,17 +2,14 @@
     font-family:궁서;
     color: #a0e9ff;
 }
-table h1{
-  font-family: 'Nanum Gothic Coding', monospace;
+*{
+	font-family: 'Nanum Gothic Coding', monospace;
 }
 
 .headImg {
   position:relative;
 }
 
-form{
-  font-family: 'Nanum Gothic Coding', monospace;
-}
 .inin{
   border: 2px solid #a0e9ff;
   color: #a0e9ff;
