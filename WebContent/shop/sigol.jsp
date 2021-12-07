@@ -14,6 +14,7 @@
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
   crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 	<jsp:include page="/module/top.jsp" flush="false" />
@@ -24,11 +25,11 @@
 	</iframe>-->
 		<div id="slideShow">
 		 <ul class="slides">
-		  <li><img src="/dongchelin/img/시골집.jpg" alt="ㅁㅁ"></li>
-		   <li><img src="/dongchelin/img/si1.jpg" alt=""></li>
-		   <li><img src="/dongchelin/img/si2.jpg" alt=""></li>
-		   <li><img src="/dongchelin/img/si3.jpg" alt=""></li>
-		   <li><img src="/dongchelin/img/si4.jpg" alt=""></li> 
+		  <li><img src="../img/시골집.jpg" alt="ㅁㅁ"></li>
+		   <li><img src="../img/si1.jpg" alt=""></li>
+		   <li><img src="../img/si2.jpg" alt=""></li>
+		   <li><img src="../img/si3.jpg" alt=""></li>
+		   <li><img src="../img/si4.jpg" alt=""></li> 
 		 </ul> <p class="controller"> 
 		      <!-- &lang: 왼쪽 방향 화살표 &rang: 오른쪽 방향 화살표 -->
 		       <span class="prev">&lang;</span> <span class="next">&rang;</span> 
@@ -41,7 +42,7 @@
     <div class='right-box'>
 	    <h2>동슐랭 별점</h2> <img src="../img/star3.png" style="margin-bottom:70px;'">
 	    <h2>추천 메뉴</h2> <ul><li>백반 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.7</li><li>누룽지탕 &nbsp;&nbsp;0.5</li><li>닭도리탕 &nbsp;&nbsp;2.5</li></ul>
-	    <h2 style="margin-top: 70px;">추천 경로</h2> <p style="margin-left: 20px; margin-bottom: 100px;">5호관 출발 시 1분 소요</p>
+	    <h2 style="margin-top: 70px;">추천 경로</h2> <p style="margin-left: 20px; margin-bottom: 70px;">5호관 출발 시 1분 소요</p>
         <form method="post" name="search" action="/dongchelin/gesi/list.jsp">
 				<table class="pull-right">
 					<tr>
@@ -49,7 +50,7 @@
 							name="searchField" maxlength="100" value="shop" style="display:none"></td>
 						<td><input type="text" class="form-control"
 							name="searchText" maxlength="100" value="시골집" style="display:none"></td>
-						<td><button type="submit" class="btn btn-success">리뷰 글 검색</button></td>
+						<td><button type="submit" class="">리뷰 글 검색</button></td>
 					</tr>
 
 				</table>

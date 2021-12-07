@@ -48,7 +48,8 @@ crossorigin="anonymous">
         <button type="button" class="btn btn-primary" onclick="insertEat();">확인</button>
       </div>
     </div>
-  </div></div>
+  </div>
+</div>
 <!-- 먹은 음식 제대로 안들어감, 페이지로드시 회원정보 날아감 --> 
 <%
 	if (session.getAttribute("sdata")!=null){

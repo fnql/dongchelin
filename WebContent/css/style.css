@@ -1,12 +1,31 @@
 #pla{
     font-family:궁서;
-    color: violet;
+    color: #a0e9ff;
+}
+table h1{
+  font-family: 'Nanum Gothic Coding', monospace;
 }
 
 .headImg {
   position:relative;
 }
 
+form{
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+.inin{
+  border: 2px solid #a0e9ff;
+  color: #a0e9ff;
+  border-radius: 4px;
+  padding: 5px 5px;
+}
+
+.bu {
+	color: rgba(160, 233, 255, 0.6);
+	box-shadow: rgba(160, 233, 255, 0.6) 0 0px 0px 2px inset;
+  font-size: 20px;
+  
+}
 .headImg div {
   position:absolute;
   text-align: center;
@@ -33,9 +52,9 @@ body {
     color: white;
     text-align: center;
     font-size: 40px;
+    
 }
 #navbar {
-    
     overflow: hidden;
     background-color: #ffffff;
   }
@@ -50,6 +69,7 @@ body {
     padding: 14px;
     text-decoration: none;
     width: 20%;
+    font-family: 'Nanum Gothic Coding', monospace;
   }
   
   /* Page content */
@@ -79,4 +99,6 @@ body {
     float: right;
     width: 48%;
   }
+  
+
   

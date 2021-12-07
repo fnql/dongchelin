@@ -1,14 +1,28 @@
   /* 가게 소개용 */
   .left-box {
     float: left;
-    width: 70%;
+    width: 50%;
+    text-align: center;
   }
   .right-box {
     float: right;
-    width: 28%;
+    width: 45%;
   }
-  
-  
+  h1{
+    background-color: #a0e9ff;
+    text-align: center;
+    color: white;
+    font-family: 'Nanum Gothic Coding', monospace;
+    
+  }
+  h2{
+    color: #a0e9ff;
+    font-family: 'Nanum Gothic Coding', monospace;
+  }
+  p{
+    font-size: 20px;
+    font-family: 'Nanum Gothic Coding', monospace;
+  }
   
 #navbar {
     
@@ -44,9 +58,16 @@
   .sticky + .content {
     padding-top: 60px;
   }
+  button{
+    background-color: #a0e9ff;
+    text-align: center;
+    color: white;
+  }
   
   
-li{ list-style-type: none; }
+li{ list-style-type: none;
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 20px; }
   
 #slideShow{ width: 550px; height: 300px; position: relative; margin: 50px auto; overflow: hidden; /*리스트 형식으로 이미지를 일렬로 정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은 hidden으로 숨겨줘야됨*/ } 
 .slides{ position: absolute; left: 0; top: 0; width: 3000px; /* 슬라이드할 사진과 마진 총 넓이 */ transition: left 0.5s ease-out; /*ease-out: 처음에는 느렸다가 점점 빨라짐*/ } /* 첫 번째 슬라이드 가운데에 정렬하기위해 첫번째 슬라이드만 margin-left조정 */ 
@@ -60,3 +81,36 @@ li{ list-style-type: none; }
 .next{ right: 10px; } /* 다음 화살표에 마우스 커서가 올라가 있을때 이전 화살표가 살짝 오른쪽으로 이동하는 효과*/ 
 .next:hover{ transform: translateX(10px); }
   
+
+
+
+.wrap {
+	position: absolute;
+	text-align: center;
+}
+
+a {
+	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	display: block;
+	max-width: 180px;
+	text-decoration: none;
+	border-radius: 4px;
+	padding: 10px 10px;
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+a.button {
+	color: rgba(160, 233, 255, 0.6);
+	box-shadow: rgba(160, 233, 255, 0.6) 0 0px 0px 2px inset;
+  font-size: 20px;
+}
+
+a.button:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(160, 233, 255, 0.7) 0 0px 0px 40px inset;
+  font-size: 20px;
+}
