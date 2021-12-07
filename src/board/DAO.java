@@ -320,7 +320,7 @@ public class DAO {
 		sql ="select * from board WHERE "+searchField.trim();
 		System.out.println(searchText);
 		try {
-			if(searchText != null && !searchText.equals("") ){//이거 빼면 안 나온다ㅜ 왜지?
+			if(searchText != null && !searchText.equals("") ){
 				sql +=" LIKE '%"+searchText.trim()+"%' order by username desc limit 10";
             }
 			pstmt = con.prepareStatement(sql);
@@ -333,6 +333,7 @@ public class DAO {
 				vo.setName(rs.getString(2));
 				vo.setTitle(rs.getString(3));
 				vo.setShop(rs.getString(6));
+				vo.setChecklist(rs.getString(12));
 				Date date = new Date();
 				SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd"); 
 				String year = (String)simpleDate.format(date);

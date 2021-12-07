@@ -24,11 +24,10 @@
 	</iframe>-->
 		<div id="slideShow">
 		 <ul class="slides">
-		  <li><img src="/dongchelin/img/시골집.jpg" alt="ㅁㅁ"></li>
-		   <li><img src="/dongchelin/img/si1.jpg" alt=""></li>
-		   <li><img src="/dongchelin/img/si2.jpg" alt=""></li>
-		   <li><img src="/dongchelin/img/si3.jpg" alt=""></li>
-		   <li><img src="/dongchelin/img/si4.jpg" alt=""></li> 
+		  <li><img src="/dongchelin/img/ho1.jpg" alt="ㅁㅁ"></li>
+		   <li><img src="/dongchelin/img/ho2.jpg" alt=""></li>
+		   <li><img src="/dongchelin/img/ho3.jpg" alt=""></li>
+		   <li><img src="/dongchelin/img/ho7.jpg" alt=""></li> 
 		 </ul> <p class="controller"> 
 		      <!-- &lang: 왼쪽 방향 화살표 &rang: 오른쪽 방향 화살표 -->
 		       <span class="prev">&lang;</span> <span class="next">&rang;</span> 

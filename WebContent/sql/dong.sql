@@ -74,7 +74,7 @@ CREATE TABLE board (
     password varchar(45),
     shop varchar(100),
     time varchar(45),
-    hit int(11),
+    hit int(11) NULL DEFAULT 0,
     ref int(11),
     indent int(11),
     step int(11),

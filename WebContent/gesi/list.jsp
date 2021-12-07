@@ -4,14 +4,22 @@
 <%@ page import="java.util.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
-<jsp:useBean id="dao" class="board.DAO"/>
 
 <%	
-	int total = dao.count();
-	ArrayList<VO> alist = dao.getMemberList();
-	int size = alist.size();
-	int size2 = size;
+	DAO dao = new DAO();
+	ArrayList<VO> alist = new ArrayList<VO>();
+	int size=0;
+	if (request.getParameter("searchField")==null){
+		alist = dao.getMemberList();
+	} else{
+		alist = dao.getSearch(request.getParameter("searchField"),
+				request.getParameter("searchText"));
+		
+	}
 	
+	int total = dao.count();
+	size = alist.size();
+	int size2 = size;
 	final int ROWSIZE = 10;
 	final int BLOCK = 11;
 	int indent = 0;
@@ -58,7 +66,7 @@ crossorigin="anonymous">
   <jsp:include page="/module/top.jsp" flush="false" />
    <div class="container">
 		<div class="row">
-			<form method="post" name="search" action="searchshop.jsp">
+			<form method="post" name="search" action="list.jsp">
 				<table class="pull-right">
 					<tr>
 						<td><select class="form-control" name="searchField">

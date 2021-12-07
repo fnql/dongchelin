@@ -7,7 +7,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-2022-KR">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/dongchelin/css/style.css">
 <link rel="stylesheet" 
