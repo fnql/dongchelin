@@ -44,21 +44,27 @@ function modifyCheck()			//경고 메시지 출력
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
  <head>
+  <link rel="stylesheet" 
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <jsp:include page="../module/top.jsp" flush="false" />
  <title>게시판</title>
  </head>
  <body>
 <table>
+<table class="table1">
 <form name=modifyform method=post action="modify_ok.jsp?idx=<%=idx%>&pg=<%=pg%>">
   <tr>
    <td>
     <table width="100%" cellpadding="0" cellspacing="0" border="0">
-     <tr style="background:url('img/table_mid.gif') repeat-x; text-align:center;">
-      <td width="5"><img src="img/table_left.gif" width="5" height="30" /></td>
+     <tr style="background:url('/dongchelin/img/table_mid.gif') repeat-x; text-align:center;">
+      <td width="5"><img src="/dongchelin/img/table_left.gif" width="5" height="30" /></td>
       <td>수정</td>
-      <td width="5"><img src="img/table_right.gif" width="5" height="30" /></td>
+      <td width="5"><img src="/dongchelin/img/table_right.gif" width="5" height="30" /></td>
      </tr>
     </table>
-   <table>
      <tr>
      <tr height="1" bgcolor="#dddddd"><td colspan="4" width="407"></td></tr>
       <td>&nbsp;</td>

@@ -64,11 +64,10 @@ crossorigin="anonymous">
  </head>
  <body>
   <jsp:include page="/module/top.jsp" flush="false" />
-   <div class="container">
-		<div class="row">
 			<form method="post" name="search" action="list.jsp">
-				<table class="pull-right">
+				<table class="">
 					<tr>
+					<td style="text-align: center;"><h1 >동슐랭 게시판</h1></td>
 						<td><select class="form-control" name="searchField">
 								<option value="0">선택</option>
 								<option value="bbsTitle">제목</option>
@@ -77,12 +76,11 @@ crossorigin="anonymous">
 						<td><input type="text" class="form-control"
 							placeholder="검색어 입력" name="searchText" maxlength="100"></td>
 						<td><button type="submit" class="btn btn-success">검색</button></td>
+						
 					</tr>
 
 				</table>
 			</form>
-		</div>
-	</div>
 <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr height="5"><td width="5"></td></tr>
  <tr style="background:url('/dongchelin/img/table_mid.gif') repeat-x; text-align:center;">
