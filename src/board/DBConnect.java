@@ -12,7 +12,7 @@ public class DBConnect {
 		String jdbc_driver = "com.mysql.cj.jdbc.Driver";
 		String jdbc_url = "jdbc:mysql://localhost:3306/study?useUcode=true&characterEncoding=utf-8";
 		String dbUser = "root";
-		String dbPass = "1234";
+		String dbPass = "rudflxla12";
 		
 		Connection conn = null;
 		
