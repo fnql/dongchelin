@@ -28,6 +28,7 @@
         String level = "";
         String visitShop ="";
         String my = "";
+        String best = "";
         
         if(check == 1)    // 로그인 성공
         { 
@@ -38,10 +39,12 @@
             level = loginMem.getAdmin();
             my = loginMem.getMyself();
             visitShop = shop.getVisit();
+            best = loginMem.getBest();
             session.setAttribute("visi", visitShop);
             session.setAttribute("datas", nickName);
             session.setAttribute("my", my);
             session.setAttribute("sessionID", id);
+            session.setAttribute("bf", best);
             if (level.equals("admin")){
             	session.setAttribute("ad", level);
             }

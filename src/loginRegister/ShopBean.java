@@ -12,7 +12,7 @@ public class ShopBean {
 	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
 	String jdbc_url = "jdbc:mysql://localhost:3306/study?useUcode=true&characterEncoding=utf-8";
 	String dbUser = "root";
-	String dbPass = "1234";
+	String dbPass = "rudflxla12";
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 	
 	
@@ -122,7 +122,7 @@ public class ShopBean {
 	public ArrayList<String> getDBList() {
 		connect();
 		ArrayList<String> sdatas = new ArrayList<String>();
-		//todos: 이메일 받아와서 해야함
+		//todos: �씠硫붿씪 諛쏆븘���꽌 �빐�빞�븿
 		String sql = "select * from eated where email = 'kim' and visit between date_add(now(),interval -1 month) and now();";
 		try {
 			pstmt = conn.prepareStatement(sql);

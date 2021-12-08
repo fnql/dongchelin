@@ -18,14 +18,16 @@ crossorigin="anonymous">
 <jsp:include page="module/top.jsp" flush="false" />
 [<a href="member_control.jsp?action=edits&email=<%=session.getAttribute("sessionID") %>">수정</a>]
 <div>
-<img src="img/default.png" alt="기본프로필" style="float:left;">
+<img src="img/default.png" alt="기본프로필" style="float:left; margin-left:20px; margin-right:20px;">
+<div style="margin-top:20px; margin-left:20px;">
 <h2><%=session.getAttribute("datas") %></h2>
 <h5><%=session.getAttribute("sessionID") %></h5>
 <input type="text" readonly value="<%=session.getAttribute("my") %>"><br>
 <button style="margin-top: 20px;" data-toggle="modal" data-target="#insertBlack" class="btn btn-danger">메뉴 추가</button>
 </div>
+</div>
 
-<div class='left-box' style="clear:both;">
+<div class='left-box' style="clear:both; margin-top:20px;">
 <h5>지난 한달간 먹은 메뉴 리스트</h5>
 
 <div class="modal fade" id="insertBlack" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -72,13 +74,24 @@ window.setTimeout(function(){
 </script>
 <canvas id="myChart"></canvas>
 </div>
-<div class='right-box'>
+<div class='right-box' style="margin-top:20px;">
 <h3>쉬는날</h3>
 <div class="husic">
-    <p style="font-family:궁서; font-size:30px; margin-left:30px">월&nbsp;&nbsp;화&nbsp;&nbsp;수&nbsp;&nbsp;목&nbsp;&nbsp;금</p>
+    <p style="font-family:궁서; font-size:30px; margin-left:30px">월&nbsp;&nbsp;<span style="color:red; font-family:궁서;">화</span>&nbsp;&nbsp;수&nbsp;&nbsp;목&nbsp;&nbsp;금</p>
 </div>
-<h3>최애 식당</h3>
-<a href="freetext.jsp">내가 쓴 리뷰</a>
+<h3>선호 음식</h3>
+<p style="font-size:20px; margin-left:30px;"><%= session.getAttribute("bf") %></p>
+<form method="post" name="search" action="/dongchelin/gesi/list.jsp">
+<table class="pull-right">
+	<tr>
+		<td><input type="text" class="form-control"
+			name="searchField" maxlength="100" value="username" style="display:none"></td>
+		<td><input type="text" class="form-control"
+			name="searchText" maxlength="100" value="<%=session.getAttribute("sessionID") %>" style="display:none"></td>
+		<td><button type="submit" class="">내가 쓴 리뷰</button></td>
+	</tr>
+</table>
+</form>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
