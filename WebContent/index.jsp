@@ -21,7 +21,7 @@
       <img src="img/place303su.jpg" style="height: 600px; width: 100%;" />
       <div class="headText">
         <h1 id="dong">동슐랭</h1>
-        <p>솔직한 리뷰, 믿을 수 있는 평점!</p>
+        <p style="font-size:30px">솔직한 리뷰, 믿을 수 있는 평점!</p>
         <form method=post action=member_control.jsp>
           <input type=hidden name="action" value="search">
         	<input type="text" placeholder="맛집 검색" name="sa" class="inin">
@@ -77,6 +77,8 @@
         <td style="width: 30%;"><img src="img/김떡비.jpg" style="height: 400px; width: 100%;" /><h1>김떡비 &ensp;<img src="img/star3.png"></h1></td>
       <tr>
     </table>
+    <jsp:include page="module/foot.jsp" flush="false" />
+
 
     
     <!--  부트스트랩 js 사용 제일 하단 위치-->
@@ -87,4 +89,5 @@
     <script type="text/javascript" src="js/app.js"></script>
     
     </body>
+
     </html>
